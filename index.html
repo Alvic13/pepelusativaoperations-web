@@ -1,0 +1,1335 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Pepelu Sativa Operations: serie de animación y videojuego de humor desde Son Cotoner, Palma.">
+<meta property="og:title" content="Pepelu Sativa Operations">
+<meta property="og:description" content="Serie de animación y videojuego de humor desde Son Cotoner, Palma.">
+<meta property="og:image" content="img/pepelu_big.webp">
+<link rel="icon" href="img/pepelu_face_neutral.webp">
+<style>html,body{margin:0;padding:0}</style>
+</head><body>
+<title>Pepelu Sativa Operations</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Patrick+Hand&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  /* --- paleta del juego --- */
+  --ink:#141414;          /* tinta */
+  --cream:#f6ead8;        /* crema */
+  --paper:#fffaf0;        /* papel */
+  --leaf:#5f8f7b;         /* hoja */
+  --leaf-d:#3f6a5c;       /* hoja oscura */
+  --leaf-l:#9fd0b8;       /* hoja clara */
+  --gold:#e8b53c;         /* oro */
+  --orange:#e07a3c;       /* naranja pistilo */
+  --red:#9a2f29;          /* sudadera */
+  /* --- tonos de cogollo --- */
+  --forest:#13241b;       /* verde bosque (tramos oscuros) */
+  --forest-2:#1a2e22;     /* bosque 2 (tarjetas) */
+  --forest-3:#24402f;     /* bosque 3 (bordes, hover) */
+  --lime:#b5d35a;         /* lima de cogollo (acento) */
+  --lime-d:#8fae35;       /* lima tostada */
+  --frost:#f4fbef;        /* escarcha / tricoma */
+  --purple:#6b4a8a;       /* variedad purple (poco) */
+  --kraft:#c9a77a;        /* cartón de las bolsas de la aso */
+  --kraft-d:#b08e60;      /* cartón doblado */
+  --line:#141414;
+  --on-dark:#f6ead8;
+  --on-dark-dim:#c3c9ae;
+  --on-light:#141414;
+  --on-light-dim:#4f4637;
+  --on-kraft-dim:#3b3124;
+  /* --- texturas --- */
+  --pat-dark:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:x='http://www.w3.org/1999/xlink' width='220' height='220'%3E%3Cdefs%3E%3Cg id='l'%3E%3Cpath transform='rotate(0)' d='M0 0C6.6 -10 6.05 -28.8 0 -40C-6.05 -28.8 -6.6 -10 0 0Z'/%3E%3Cpath transform='rotate(30)' d='M0 0C6 -8.75 5.5 -25.2 0 -35C-5.5 -25.2 -6 -8.75 0 0Z'/%3E%3Cpath transform='rotate(-30)' d='M0 0C6 -8.75 5.5 -25.2 0 -35C-5.5 -25.2 -6 -8.75 0 0Z'/%3E%3Cpath transform='rotate(60)' d='M0 0C4.8 -6.75 4.4 -19.44 0 -27C-4.4 -19.44 -4.8 -6.75 0 0Z'/%3E%3Cpath transform='rotate(-60)' d='M0 0C4.8 -6.75 4.4 -19.44 0 -27C-4.4 -19.44 -4.8 -6.75 0 0Z'/%3E%3Cpath transform='rotate(92)' d='M0 0C3.6 -4 3.3 -11.52 0 -16C-3.3 -11.52 -3.6 -4 0 0Z'/%3E%3Cpath transform='rotate(-92)' d='M0 0C3.6 -4 3.3 -11.52 0 -16C-3.3 -11.52 -3.6 -4 0 0Z'/%3E%3Cpath d='M0 0v15'/%3E%3C/g%3E%3C/defs%3E%3Cg fill='none' stroke='%23b5d35a' stroke-opacity='0.11' stroke-width='1.6' stroke-linejoin='round' stroke-linecap='round'%3E%3Cuse x:href='%23l' transform='translate(62 70) rotate(-18) scale(1.05)'/%3E%3Cuse x:href='%23l' transform='translate(165 162) rotate(152) scale(.72)'/%3E%3Cuse x:href='%23l' transform='translate(170 48) rotate(40) scale(.42)'/%3E%3C/g%3E%3C/svg%3E");
+  --pat-light:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:x='http://www.w3.org/1999/xlink' width='220' height='220'%3E%3Cdefs%3E%3Cg id='l'%3E%3Cpath transform='rotate(0)' d='M0 0C6.6 -10 6.05 -28.8 0 -40C-6.05 -28.8 -6.6 -10 0 0Z'/%3E%3Cpath transform='rotate(30)' d='M0 0C6 -8.75 5.5 -25.2 0 -35C-5.5 -25.2 -6 -8.75 0 0Z'/%3E%3Cpath transform='rotate(-30)' d='M0 0C6 -8.75 5.5 -25.2 0 -35C-5.5 -25.2 -6 -8.75 0 0Z'/%3E%3Cpath transform='rotate(60)' d='M0 0C4.8 -6.75 4.4 -19.44 0 -27C-4.4 -19.44 -4.8 -6.75 0 0Z'/%3E%3Cpath transform='rotate(-60)' d='M0 0C4.8 -6.75 4.4 -19.44 0 -27C-4.4 -19.44 -4.8 -6.75 0 0Z'/%3E%3Cpath transform='rotate(92)' d='M0 0C3.6 -4 3.3 -11.52 0 -16C-3.3 -11.52 -3.6 -4 0 0Z'/%3E%3Cpath transform='rotate(-92)' d='M0 0C3.6 -4 3.3 -11.52 0 -16C-3.3 -11.52 -3.6 -4 0 0Z'/%3E%3Cpath d='M0 0v15'/%3E%3C/g%3E%3C/defs%3E%3Cg fill='none' stroke='%233f6a5c' stroke-opacity='0.11' stroke-width='1.6' stroke-linejoin='round' stroke-linecap='round'%3E%3Cuse x:href='%23l' transform='translate(62 70) rotate(-18) scale(1.05)'/%3E%3Cuse x:href='%23l' transform='translate(165 162) rotate(152) scale(.72)'/%3E%3Cuse x:href='%23l' transform='translate(170 48) rotate(40) scale(.42)'/%3E%3C/g%3E%3C/svg%3E");
+  --pat-kraft:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:x='http://www.w3.org/1999/xlink' width='220' height='220'%3E%3Cdefs%3E%3Cg id='l'%3E%3Cpath transform='rotate(0)' d='M0 0C6.6 -10 6.05 -28.8 0 -40C-6.05 -28.8 -6.6 -10 0 0Z'/%3E%3Cpath transform='rotate(30)' d='M0 0C6 -8.75 5.5 -25.2 0 -35C-5.5 -25.2 -6 -8.75 0 0Z'/%3E%3Cpath transform='rotate(-30)' d='M0 0C6 -8.75 5.5 -25.2 0 -35C-5.5 -25.2 -6 -8.75 0 0Z'/%3E%3Cpath transform='rotate(60)' d='M0 0C4.8 -6.75 4.4 -19.44 0 -27C-4.4 -19.44 -4.8 -6.75 0 0Z'/%3E%3Cpath transform='rotate(-60)' d='M0 0C4.8 -6.75 4.4 -19.44 0 -27C-4.4 -19.44 -4.8 -6.75 0 0Z'/%3E%3Cpath transform='rotate(92)' d='M0 0C3.6 -4 3.3 -11.52 0 -16C-3.3 -11.52 -3.6 -4 0 0Z'/%3E%3Cpath transform='rotate(-92)' d='M0 0C3.6 -4 3.3 -11.52 0 -16C-3.3 -11.52 -3.6 -4 0 0Z'/%3E%3Cpath d='M0 0v15'/%3E%3C/g%3E%3C/defs%3E%3Cg fill='none' stroke='%2313241b' stroke-opacity='0.13' stroke-width='1.6' stroke-linejoin='round' stroke-linecap='round'%3E%3Cuse x:href='%23l' transform='translate(62 70) rotate(-18) scale(1.05)'/%3E%3Cuse x:href='%23l' transform='translate(165 162) rotate(152) scale(.72)'/%3E%3Cuse x:href='%23l' transform='translate(170 48) rotate(40) scale(.42)'/%3E%3C/g%3E%3C/svg%3E");
+  --smoke:radial-gradient(70svh 42svh at 16% 80%, rgba(244,251,239,.075), transparent 70%),radial-gradient(64svh 36svh at 58% 18%, rgba(244,251,239,.05), transparent 70%),radial-gradient(56svh 34svh at 92% 64%, rgba(159,208,184,.07), transparent 70%);
+  --smoke-purple:radial-gradient(80svh 50svh at 30% 30%, rgba(107,74,138,.22), transparent 70%),radial-gradient(70svh 40svh at 78% 75%, rgba(107,74,138,.14), transparent 70%);
+  --smoke-light:radial-gradient(70svh 40svh at 20% 22%, rgba(255,255,255,.45), transparent 70%),radial-gradient(60svh 36svh at 80% 85%, rgba(255,255,255,.3), transparent 70%);
+  --tick-h:30px;
+  --gut-l:max(16px, env(safe-area-inset-left, 0px));
+  --gut-r:max(16px, env(safe-area-inset-right, 0px));
+  --gut-b:max(16px, env(safe-area-inset-bottom, 0px));
+  --f-display:"Climate Crisis","Rubik Mono One","Arial Black",Impact,sans-serif;
+  --f-mono:"Rubik Mono One","Arial Black",Impact,sans-serif;
+  --f-hand:"Patrick Hand","Comic Sans MS","Chalkboard SE","Segoe Print",cursive,sans-serif;
+  --sk:0deg;
+}
+*{box-sizing:border-box}
+html{height:100%;overflow:hidden;background:var(--forest)}
+body{height:100%;margin:0;overflow:hidden;overscroll-behavior:none;background:var(--forest);color:var(--on-dark);font-family:var(--f-hand);font-size:18px;line-height:1.3;-webkit-tap-highlight-color:transparent}
+img{display:block;max-width:none;user-select:none;-webkit-user-select:none}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:4px;border-radius:6px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:fixed;left:var(--gut-l);top:calc(var(--tick-h) + 8px);z-index:60;background:var(--lime);color:var(--ink);padding:8px 12px;border-radius:99px;font-family:var(--f-mono);font-size:12px;text-decoration:none;transform:translateY(-300px)}
+.skip:focus{transform:none}
+
+/* etiqueta de tarro de la aso */
+.jar,.tag b{display:inline-block;font-family:var(--f-mono);font-weight:400;letter-spacing:.08em;background:var(--paper);color:var(--ink);border:2px solid var(--ink);border-radius:7px;padding:.55em .9em .5em;outline:1.5px dashed var(--leaf-d);outline-offset:-5px;box-shadow:3px 3px 0 var(--ink);white-space:nowrap}
+.dark .jar,.dark .tag b{background:var(--lime);outline-color:var(--forest)}
+.kraft .jar,.kraft .tag b{background:var(--paper)}
+
+/* ---------- ticker ---------- */
+.ticker{position:fixed;inset:0 0 auto 0;height:var(--tick-h);z-index:40;background:var(--forest);border-bottom:1px solid var(--forest-3);overflow:hidden;display:flex;align-items:center}
+.ticker__row{display:flex;white-space:nowrap;animation:tick 60s linear infinite;will-change:transform}
+.ticker__row span{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;color:var(--on-dark);padding-right:2.2em}
+.ticker__row span::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--lime);margin-right:1.4em;vertical-align:1px}
+.ticker__row span:nth-child(3n)::before{background:var(--orange)}
+@keyframes tick{to{transform:translateX(-50%)}}
+.prog{position:fixed;left:0;right:0;top:var(--tick-h);height:3px;z-index:41;background:transparent;pointer-events:none}
+.prog i{display:block;height:100%;background:linear-gradient(90deg,var(--lime),var(--gold) 70%,var(--orange));transform-origin:0 50%;transform:scaleX(0)}
+.where{position:fixed;left:var(--gut-l);bottom:max(14px, env(safe-area-inset-bottom,0px));z-index:30;font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;padding:7px 11px;border-radius:7px;background:var(--forest);color:var(--lime);border:2px solid var(--lime);outline:1px dashed rgba(181,211,90,.45);outline-offset:-5px;pointer-events:none}
+
+/* ---------- flechas y aviso ---------- */
+.arr{position:fixed;z-index:35;top:calc(50% + var(--tick-h) / 2 - 22px);width:44px;height:44px;opacity:.85;border-radius:50%;border:3px solid var(--ink);background:var(--lime);color:var(--ink);font-family:var(--f-mono);font-size:18px;line-height:1;display:grid;place-items:center;cursor:pointer;padding:0;box-shadow:0 0 0 3px var(--cream),0 6px 16px rgba(0,0,0,.35);transition:transform .2s cubic-bezier(.3,1.6,.5,1),opacity .2s}
+.arr.prev{left:var(--gut-l)}
+.arr.next{right:var(--gut-r)}
+.arr:hover,.arr:focus-visible{transform:scale(1.08);opacity:1}
+.arr:active{transform:scale(.94)}
+.arr:disabled{opacity:0;visibility:hidden;pointer-events:none}
+.swipe{position:fixed;z-index:36;right:var(--gut-r);bottom:max(14px, env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:.6em;font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;background:var(--lime);color:var(--ink);border:2px solid var(--ink);border-radius:99px;padding:9px 14px;box-shadow:3px 3px 0 var(--ink);pointer-events:none;transition:opacity .35s,transform .35s}
+.swipe i{display:inline-block;font-style:normal;animation:nudge 1s ease-in-out infinite}
+.swipe.off{opacity:0;transform:translateY(12px)}
+
+/* ---------- menú ---------- */
+.mbtn{position:fixed;z-index:50;top:calc(var(--tick-h) + 12px);right:var(--gut-r);width:64px;height:64px;border-radius:50%;border:3px solid var(--line);background:var(--lime);padding:0;cursor:pointer;display:grid;place-items:center;box-shadow:0 0 0 3px var(--cream),0 6px 18px rgba(0,0,0,.45);transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
+.mbtn img{width:50px;height:auto;pointer-events:none}
+.mbtn:hover{transform:rotate(-10deg) scale(1.06)}
+.mbtn[aria-expanded="true"]{transform:rotate(12deg) scale(1.04);background:var(--gold)}
+.mbtn__lbl{position:absolute;bottom:-9px;left:50%;transform:translateX(-50%);font-family:var(--f-mono);font-size:8px;letter-spacing:.12em;background:var(--forest);color:var(--lime);padding:3px 6px;border-radius:99px;white-space:nowrap}
+.menu{position:fixed;z-index:49;top:calc(var(--tick-h) + 88px);right:var(--gut-r);width:min(330px, calc(100vw - var(--gut-l) - var(--gut-r)));background:var(--forest) var(--pat-dark) 0 0/220px 220px;color:var(--on-dark);border:3px solid var(--lime);border-radius:22px;padding:14px 10px 10px;box-shadow:8px 8px 0 var(--leaf-d);transform-origin:calc(100% - 32px) -40px;animation:pop .28s cubic-bezier(.3,1.5,.5,1)}
+.menu[hidden]{display:none}
+@keyframes pop{from{transform:scale(.6) rotate(-6deg);opacity:0}}
+.menu h2{margin:0 10px 8px;font-family:var(--f-mono);font-size:10px;letter-spacing:.16em;color:var(--lime);font-weight:400}
+.menu ol{list-style:none;margin:0;padding:0}
+.menu a{display:grid;grid-template-columns:30px 1fr;align-items:baseline;gap:0 8px;padding:9px 10px;border-radius:12px;color:var(--on-dark);text-decoration:none}
+.menu a:hover,.menu a[aria-current="true"]{background:var(--forest-3)}
+.menu a .n{font-family:var(--f-mono);font-size:11px;color:var(--lime)}
+.menu a .t{font-family:var(--f-mono);font-size:15px;letter-spacing:.02em}
+.menu a .x{grid-column:2;font-size:15px;color:var(--on-dark-dim)}
+.menu a .x{display:none}
+
+/* ---------- panorama: scroller horizontal nativo ---------- */
+main{height:100%}
+.pano{position:relative;height:100%;width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;touch-action:pan-x pinch-zoom}
+.pano::-webkit-scrollbar{display:none}
+@media (pointer:coarse){
+  .pano{scroll-snap-type:x proximity}
+  .pan{scroll-snap-align:start}
+}
+.track{display:flex;height:100%;width:max-content}
+.pan{position:relative;height:100%;flex:none;overflow:hidden;overflow:clip;display:flex;align-items:stretch;padding-top:calc(var(--tick-h) + 3px)}
+.pan.dark{background:var(--smoke),var(--pat-dark) 0 0/220px 220px,var(--forest);color:var(--on-dark)}
+.pan.night{background:var(--smoke-purple),var(--smoke),var(--pat-dark) 0 0/220px 220px,var(--forest)}
+.pan.cream{background:var(--smoke-light),var(--pat-light) 0 0/220px 220px,var(--cream);color:var(--on-light)}
+.pan.paper{background:var(--smoke-light),var(--pat-light) 0 0/220px 220px,var(--paper);color:var(--on-light)}
+.pan.kraft{background:var(--smoke-light),var(--pat-kraft) 0 0/220px 220px,var(--kraft);color:var(--on-light)}
+.pan.edge::before{content:"";position:absolute;z-index:3;top:0;bottom:0;left:-1px;width:2.2svh;background:conic-gradient(from 45deg at 0 50%, var(--prev) 90deg, transparent 0) 0 0/100% 4.4svh repeat-y;pointer-events:none}
+.pan > *{flex:none}
+[data-s]{will-change:transform}
+
+/* palabras de fondo */
+.ghost{position:absolute;z-index:0;font-family:var(--f-display);font-size:42svh;line-height:.8;white-space:nowrap;color:transparent;-webkit-text-fill-color:transparent;-webkit-text-stroke:2px var(--gc);opacity:.3;pointer-events:none;user-select:none}
+.dark .ghost{--gc:var(--lime);opacity:.24}
+.cream .ghost,.paper .ghost{--gc:var(--leaf)}
+.kraft .ghost{--gc:var(--forest);opacity:.22}
+
+/* ---------- 1. inicio ---------- */
+.p-inicio{padding-left:var(--gut-l);padding-right:12svh}
+.hero-t{position:relative;z-index:2;align-self:center;margin:0;font-family:var(--f-display);font-weight:400;font-size:min(19svh, 9.6vw);line-height:.86;letter-spacing:-.01em;color:var(--cream);text-transform:uppercase;padding-top:2svh;text-shadow:0 0 40px rgba(244,251,239,.08)}
+.hero-t span{display:block;white-space:nowrap}
+.hero-t span:nth-child(2){padding-left:.9em;color:var(--lime)}
+.hero-t span:nth-child(3){padding-left:.3em}
+.hero-meta{position:absolute;z-index:4;left:var(--gut-l);bottom:5svh;max-width:min(40svh, calc(100vw - 2*var(--gut-l)));font-size:max(15px,2.3svh);color:var(--on-dark-dim)}
+.hero-meta b{display:block;font-family:var(--f-mono);font-weight:400;font-size:max(10px,1.3svh);letter-spacing:.14em;color:var(--lime);margin-bottom:.5em}
+.hint{display:inline-flex;align-items:center;gap:.5em;margin-top:.7em;color:var(--cream);font-family:var(--f-mono);font-size:max(10px,1.3svh);letter-spacing:.1em}
+.hint i{display:inline-block;animation:nudge 1.2s ease-in-out infinite;font-style:normal;color:var(--orange)}
+@keyframes nudge{50%{transform:translateX(6px)}}
+.seal{position:absolute;z-index:5;width:min(34svh, 76vw);aspect-ratio:1;left:calc(100vw - min(34svh, 76vw) - max(40px, 4vw));top:calc(50% - min(34svh, 76vw) + 4svh)}
+.seal__ring{position:absolute;inset:0;will-change:transform}
+.seal__ring svg{width:100%;height:100%;display:block;overflow:visible}
+.seal__core{position:absolute;inset:22%;border-radius:50%;background:var(--cream);border:4px solid var(--line);display:grid;place-items:center;overflow:hidden}
+.seal__core img{width:86%;height:auto;margin-top:8%}
+.seal__ring text{font-family:var(--f-mono);font-size:13.2px;letter-spacing:2.1px;fill:var(--ink)}
+
+/* ---------- 2. pepelu ---------- */
+.p-pepelu{padding:0 10svh 0 14svh;align-items:flex-end}
+.pp-stage{position:relative;width:120svh;height:100%}
+.pp-spot{position:absolute;left:30svh;bottom:-6svh;width:60svh;height:30svh;border-radius:50%;background:radial-gradient(closest-side, rgba(181,211,90,.34), rgba(181,211,90,0));pointer-events:none}
+.pp-fig{position:absolute;left:38svh;bottom:5svh;z-index:2}
+.pp-fig img{height:74svh;width:auto;filter:drop-shadow(10px 10px 0 rgba(181,211,90,.22))}
+.bub{position:absolute;z-index:3;width:min(34svh, 78vw);background:var(--cream);color:var(--on-light);border:3px solid var(--line);border-radius:22px;padding:.7em .9em;font-size:max(16px,2.6svh);line-height:1.15;box-shadow:6px 6px 0 var(--lime)}
+.bub::after{content:"";position:absolute;width:22px;height:22px;background:var(--cream);border:3px solid var(--line);border-top:0;border-left:0;bottom:-13px;left:30%;transform:rotate(45deg)}
+.bub small{display:block;font-family:var(--f-mono);font-size:max(9px,1.1svh);letter-spacing:.12em;color:var(--leaf-d);margin-bottom:.35em}
+.b1{left:0;top:10svh;transform:rotate(-3deg)}
+.b2{left:76svh;top:7svh;transform:rotate(2.5deg);box-shadow:6px 6px 0 var(--orange)}
+.b2::after{left:18%}
+.b3{left:82svh;top:46svh;transform:rotate(-1.5deg)}
+.b3::after{left:12%;bottom:auto;top:-13px;transform:rotate(225deg)}
+.idcard{position:absolute;z-index:3;left:2svh;bottom:8svh;width:min(34svh, 78vw);border:2px solid var(--lime);outline:1.5px dashed rgba(181,211,90,.5);outline-offset:-7px;border-radius:12px;padding:.9em 1.1em;background:rgba(19,36,27,.94);font-size:max(15px,2.1svh)}
+.idcard b{display:block;font-family:var(--f-mono);font-weight:400;font-size:max(15px,2.6svh);color:var(--lime);line-height:1.05;margin-bottom:.3em}
+
+/* stickers y caras sueltas */
+.stk,.face{position:absolute;z-index:1;pointer-events:none}
+.stk img{height:var(--sz,13svh);width:auto;filter:drop-shadow(3px 4px 0 rgba(0,0,0,.25))}
+.stk > img{transform:rotate(var(--r,0deg))}
+.face img{height:var(--sz,16svh);width:auto}
+.face .bar{position:absolute;left:4%;right:4%;top:var(--bt,47%);height:15%;background:var(--lime);transform:rotate(var(--br,-4deg));box-shadow:0 0 14px rgba(181,211,90,.55)}
+
+/* ---------- 3. barrio (desfile) ---------- */
+.p-barrio{padding:0 6svh 0 8svh;align-items:flex-end}
+.sec-h{position:relative;z-index:4;align-self:center;width:max-content;max-width:min(64svh, 86vw);margin-right:6svh}
+.sec-h h2{margin:0;font-family:var(--f-display);font-weight:400;font-size:min(8.5svh, 15vw);line-height:.86;text-transform:uppercase}
+.sec-h p{margin:.6em 0 0;font-size:max(16px,2.4svh);max-width:min(36svh, 80vw)}
+.sec-h .kick{font-size:max(10px,1.3svh);letter-spacing:.14em;margin-bottom:1.2em}
+.dark .sec-h p{color:var(--on-dark-dim)}
+.cream .sec-h p,.paper .sec-h p{color:var(--on-light-dim)}
+.kraft .sec-h p{color:var(--on-kraft-dim)}
+.neon{position:absolute;z-index:0;left:0;right:0;top:34%;height:9svh;background:var(--lime);transform:rotate(-1.2deg);opacity:.85}
+.neon.b{top:auto;bottom:16svh;height:3svh;transform:rotate(.8deg);opacity:.7;background:var(--paper)}
+.curb{position:absolute;z-index:0;left:0;right:0;bottom:0;height:9svh;background:repeating-linear-gradient(90deg,#d8cbb6 0 12svh,#cfc1aa 12svh 12.4svh);border-top:5px solid var(--line)}
+.kraft .curb{background:repeating-linear-gradient(90deg,var(--kraft-d) 0 12svh,#a07f53 12svh 12.4svh)}
+.dark .curb{background:repeating-linear-gradient(90deg,#0f1d16 0 12svh,#0b1610 12svh 12.4svh);border-top-color:var(--lime)}
+.parade{position:relative;z-index:2;display:flex;align-items:flex-end;gap:5svh;height:100%;padding-bottom:4svh}
+.pj-wrap{position:relative;flex:none;margin-bottom:calc(var(--lift) * 1svh)}
+.pj{position:relative;display:flex;flex-direction:column;align-items:center;background:none;border:0;padding:0;cursor:pointer;transform:skewX(var(--sk));transform-origin:50% 100%}
+.fig{display:block;animation:bob 3.2s ease-in-out var(--d) infinite alternate;transform-origin:50% 100%}
+.fig img{height:calc(var(--h) * 1svh);width:auto;transition:filter .2s}
+@keyframes bob{to{transform:translateY(-.8svh) rotate(.6deg)}}
+.pj:hover .fig,.pj:focus-visible .fig,.pj.on .fig{animation:boing .7s cubic-bezier(.3,1.4,.5,1) both}
+@keyframes boing{0%{transform:none}25%{transform:translateY(-3svh) rotate(-6deg)}55%{transform:translateY(-1svh) rotate(5deg)}80%{transform:translateY(-.5svh) rotate(-2deg)}100%{transform:translateY(-1.2svh)}}
+.pj:hover .fig img,.pj.on .fig img,.pj:focus-visible .fig img{filter:drop-shadow(0 8px 0 var(--lime))}
+.kraft .pj:hover .fig img,.kraft .pj.on .fig img,.kraft .pj:focus-visible .fig img{filter:drop-shadow(0 8px 0 var(--forest))}
+.tag{position:relative;z-index:3;margin-top:-1svh;display:flex;flex-direction:column;align-items:center;text-align:center;transform:rotate(-2deg)}
+.pj-wrap:nth-child(even) .tag{transform:rotate(2deg)}
+.tag b{font-size:max(10px,1.45svh);letter-spacing:.04em}
+.tag i{font-style:normal;font-size:max(14px,1.9svh);margin-top:.35em;white-space:nowrap}
+.dark .tag i{color:var(--on-dark-dim)}
+.cream .tag i,.paper .tag i{color:var(--on-light-dim)}
+.kraft .tag i{color:var(--on-kraft-dim)}
+.say{position:absolute;z-index:6;bottom:calc(100% - 3svh);left:50%;width:max-content;max-width:min(30svh, 70vw);min-width:150px;background:var(--cream);color:var(--on-light);border:3px solid var(--line);border-radius:18px;padding:.55em .8em;font-size:max(16px,2.3svh);line-height:1.12;text-align:left;opacity:0;transform:translate(-50%,12px) scale(.85) rotate(-2deg);transition:opacity .18s,transform .3s cubic-bezier(.3,1.6,.5,1);pointer-events:none;box-shadow:5px 5px 0 var(--orange)}
+.say::after{content:"";position:absolute;left:calc(50% - 10px);bottom:-12px;width:18px;height:18px;background:var(--cream);border:3px solid var(--line);border-top:0;border-left:0;transform:rotate(45deg)}
+.pj:hover .say,.pj:focus-visible .say,.pj.on .say{opacity:1;transform:translate(-50%,0) scale(1) rotate(-2deg)}
+.pstk{position:absolute;z-index:4;bottom:16svh;pointer-events:none}
+.pstk.r{right:-6.5svh}
+.pstk.l{left:-6.5svh}
+.pstk img{height:9svh;width:auto;transform:rotate(-8deg);filter:drop-shadow(3px 4px 0 rgba(0,0,0,.25))}
+.pstk.l img{transform:rotate(9deg)}
+.pj-wrap:has(.pj:hover) {z-index:5}
+.pj-wrap:has(.pj.on) {z-index:5}
+.pj-wrap:has(.pj:focus-visible) {z-index:5}
+
+/* ---------- 4. episodios ---------- */
+.p-eps{padding:0 8svh;align-items:center;gap:6svh}
+.ep{position:relative;z-index:2;width:min(70svh, 84vw);margin-top:4svh}
+.ep__img{position:relative;aspect-ratio:16/9;border:4px solid var(--line);border-radius:14px;overflow:hidden;background:var(--forest-2);box-shadow:10px 10px 0 var(--leaf-d)}
+.ep__img > img{width:100%;height:100%;object-fit:cover}
+.ep__n{position:absolute;z-index:3;left:-2svh;top:-9svh;font-family:var(--f-display);font-size:16svh;line-height:1;color:var(--cream);-webkit-text-stroke:3px var(--line);paint-order:stroke fill}
+.ep:nth-of-type(1) .ep__n{color:var(--lime)}
+.ep:nth-of-type(3) .ep__n{color:var(--purple)}
+.ep:nth-of-type(3) .ep__img{box-shadow:10px 10px 0 var(--purple)}
+.ep h3{margin:1.1em 0 .25em;font-family:var(--f-mono);font-weight:400;font-size:max(17px,2.8svh);line-height:1.05;text-transform:uppercase}
+.ep p{margin:0;font-size:max(15px,2.15svh);color:var(--on-light-dim);max-width:62svh}
+.ep .dur{margin-top:.8em;font-size:max(9px,1.2svh);letter-spacing:.12em}
+.ep:nth-of-type(2){margin-top:0}
+.ep:nth-of-type(3){margin-top:12svh}
+.ep__col{position:absolute;inset:0;background:radial-gradient(circle at 70% 40%, #3a2c4c, var(--forest) 70%)}
+.ep__col .clock{position:absolute;right:5%;top:5%;z-index:2;font-family:var(--f-display);font-size:min(6svh, 7vw);color:var(--lime);text-shadow:0 0 22px rgba(181,211,90,.55);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:.35}}
+.ep__col img{position:absolute;bottom:-2%;height:80%;width:auto}
+.ep__col img:nth-of-type(1){left:3%;height:58%}
+.ep__col img:nth-of-type(2){left:38%;height:64%}
+.ep__col img:nth-of-type(3){right:4%;height:70%}
+
+/* ---------- 5. merch ---------- */
+.p-merch{padding:0 8svh;align-items:center;gap:5svh}
+.polaroid{position:relative;z-index:2;background:var(--cream);color:var(--on-light);padding:1.4svh 1.4svh 0;border-radius:6px;box-shadow:0 18px 40px rgba(0,0,0,.5);width:min(58svh, 82vw)}
+.polaroid img{width:100%;height:auto;border-radius:3px}
+.polaroid figcaption{padding:1.1em .4em 1.2em;font-size:max(15px,2.2svh);line-height:1.2}
+.polaroid figcaption b{display:block;font-family:var(--f-mono);font-weight:400;font-size:max(13px,1.9svh);margin-bottom:.3em}
+.polaroid .price{position:absolute;right:-2svh;top:-2.5svh;background:var(--orange);color:var(--ink);font-family:var(--f-mono);font-size:max(11px,1.6svh);padding:.8em .9em;border-radius:50%;aspect-ratio:1;display:grid;place-items:center;text-align:center;line-height:1.1;border:3px solid var(--line);outline:1.5px dashed var(--ink);outline-offset:-8px;transform:rotate(12deg)}
+.pol-a{transform:rotate(-2.5deg)}
+.pol-b{transform:rotate(2deg);margin-top:10svh;width:min(48svh, 80vw)}
+.sheet{position:relative;z-index:2;width:min(64svh, 86vw);background:var(--frost);border-radius:22px;padding:2.4svh;box-shadow:0 18px 40px rgba(0,0,0,.5);transform:rotate(-1deg);color:var(--on-light)}
+.sheet__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4svh;align-items:center;justify-items:center}
+.sheet__grid img{width:100%;height:auto;transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
+.sheet__grid img:hover{transform:scale(1.12) rotate(-4deg)}
+.sheet p{margin:1.4svh 0 0;font-size:max(15px,2.1svh)}
+.sheet p b{font-family:var(--f-mono);font-weight:400}
+.elsewhere{display:inline-flex;align-items:center;gap:.5em;font-family:var(--f-mono);font-size:max(10px,1.3svh);letter-spacing:.1em;border:2px dashed currentColor;padding:.6em .9em;border-radius:99px;margin-top:1.4em}
+.dark .elsewhere{color:var(--lime)}
+.cream .elsewhere,.paper .elsewhere{color:var(--leaf-d)}
+.kraft .elsewhere{color:var(--forest)}
+
+/* ---------- 6. podcast ---------- */
+.p-pod{padding:0 8svh;align-items:center;gap:6svh}
+.pod-img{position:relative;z-index:2;width:min(84svh, 88vw);border:4px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:10px 10px 0 var(--forest)}
+.pod-img img{width:100%;height:auto}
+.onair{position:absolute;left:3%;top:5%;font-family:var(--f-mono);font-size:max(10px,1.5svh);letter-spacing:.14em;background:var(--red);color:var(--frost);padding:.5em .9em;border-radius:99px;border:3px solid var(--line);animation:blink 1.4s steps(1) infinite}
+.wave{display:flex;align-items:center;gap:.6svh;height:9svh;margin-top:2svh}
+.wave i{flex:none;width:1.1svh;height:100%;background:var(--forest);border-radius:99px;transform-origin:50% 50%;animation:wv .9s ease-in-out infinite alternate}
+.wave i:nth-child(4n){background:var(--orange)}
+@keyframes wv{from{transform:scaleY(.15)}to{transform:scaleY(1)}}
+
+/* ---------- 7. juego ---------- */
+.p-juego{padding:0 8svh;align-items:center;gap:6svh}
+.hud{position:relative;z-index:2;width:min(48svh, 84vw);border:4px solid var(--lime);border-radius:18px;background:var(--forest-2);padding:2svh;box-shadow:0 0 0 4px var(--ink),0 0 40px rgba(181,211,90,.2);font-size:max(15px,2.1svh)}
+.hud__row{display:flex;justify-content:space-between;align-items:center;gap:1em;padding:1.1svh 0;border-bottom:2px dashed var(--forest-3)}
+.hud__row:last-of-type{border-bottom:0}
+.hud__row span{color:var(--on-dark-dim)}
+.hud__row b{font-family:var(--f-mono);font-weight:400;color:var(--lime);font-size:max(14px,2.2svh);text-align:right}
+.hud__row b.bad{color:var(--orange)}
+.hud .meter{height:1.6svh;min-height:10px;border-radius:99px;background:var(--forest-3);overflow:hidden;margin-top:.6svh}
+.hud .meter i{display:block;height:100%;width:3%;background:linear-gradient(90deg,var(--lime),var(--gold))}
+.juego-fig{position:relative;z-index:2;align-self:flex-end;margin-bottom:6svh}
+.juego-fig img{height:62svh;width:auto}
+
+/* ---------- 8. final ---------- */
+.p-fin{min-width:100vw;padding:0 calc(var(--gut-r) + 12svh) 0 10svh;align-items:center;justify-content:center;gap:4svh}
+.fin-fig{position:relative;z-index:2;align-self:flex-end;margin-bottom:5svh}
+.fin-fig > img{height:64svh;width:auto;transform-origin:50% 100%;animation:wave-bye 2.4s ease-in-out infinite}
+@keyframes wave-bye{0%,100%{transform:rotate(0)}20%{transform:rotate(-3deg)}40%{transform:rotate(2deg)}60%{transform:rotate(-1deg)}}
+.fin-fig .bub{left:auto;right:-6svh;top:-4svh;width:min(30svh, 70vw)}
+.fin-copy{position:relative;z-index:2;width:min(100svh, 92vw)}
+.fin-copy h2{margin:0;font-family:var(--f-display);font-weight:400;font-size:min(14svh, 15vw);line-height:.85;color:var(--ink);text-transform:uppercase}
+.fin-copy h2 span{display:block;color:var(--leaf-d)}
+.fin-copy p{margin:1em 0 0;font-size:max(16px,2.5svh);color:var(--on-light-dim);max-width:60svh}
+.fin-copy .credits{margin-top:3svh;font-family:var(--f-mono);font-size:max(9px,1.2svh);letter-spacing:.12em;color:var(--on-light-dim)}
+.btn-up{display:inline-flex;align-items:center;gap:.5em;margin-top:2.6svh;background:var(--forest);color:var(--lime);border:2px solid var(--ink);border-radius:99px;padding:.8em 1.2em;font-family:var(--f-mono);font-size:max(11px,1.5svh);cursor:pointer;text-decoration:none;box-shadow:3px 3px 0 var(--lime-d)}
+
+/* ---------- táctil: sin flechas, el dedo manda ---------- */
+@media (hover:none) and (pointer:coarse){
+  .arr{display:none}
+}
+
+/* ---------- móvil ---------- */
+@media (max-aspect-ratio: 3/4){
+  .hero-t{font-size:min(12svh, 9.4vw);align-self:flex-start;margin-top:8svh}
+  .hero-t span:nth-child(2),.hero-t span:nth-child(3){padding-left:0}
+  .seal{top:auto;bottom:29svh;left:calc(50vw - min(13svh, 30vw));width:min(26svh, 60vw)}
+  .hero-meta{bottom:9svh}
+  .pp-stage{width:96svh}
+  .pp-fig{left:4svh}
+  .pp-fig img{height:56svh}
+  .p-pepelu{padding-left:6svh}
+  .b1{left:0;top:5svh}
+  .b2{left:50svh;top:5svh}
+  .b3{left:50svh;top:34svh}
+  .idcard{left:50svh;bottom:6svh}
+  .pp-spot{left:0}
+  .p-fin{flex-direction:column;justify-content:center;align-items:flex-start;width:100vw;padding:0 var(--gut-r) 0 calc(var(--gut-l) + 2.2svh);gap:2svh}
+  .fin-fig{align-self:flex-start;margin:6svh 0 0}
+  .fin-fig > img{height:32svh}
+  .fin-fig .bub{right:auto;left:calc(100% + 8px);top:2svh;width:min(46vw, 220px)}
+  .fin-copy{width:100%}
+  .fin-copy h2{font-size:13.6vw}
+}
+
+/* ---------- movimiento reducido: mismo recorrido horizontal, sin efectos ---------- */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .ticker__row{transform:none}
+  [data-s]{transform:none!important}
+  .seal__ring{transform:none!important}
+  .pj{transform:none}
+}
+</style>
+<style>
+/* ===== añadidos v3: mecánicas de la web 1 + modo vertical ===== */
+body{font-variant-emoji:text}
+.ar{width:.9em;height:.9em;display:inline-block;vertical-align:-.08em}
+
+/* botones tipo píldora (tarro de la aso) */
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--f-mono);font-size:max(11px,1.45svh);letter-spacing:.06em;color:var(--ink);background:var(--lime);border:2px solid var(--ink);border-radius:99px;padding:.85em 1.25em .8em;box-shadow:3px 3px 0 var(--ink);cursor:pointer;text-decoration:none;min-height:44px;transition:transform .12s cubic-bezier(.3,1.6,.5,1),box-shadow .12s}
+.pill:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.pill:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.pill[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.pill.big{font-size:max(12px,1.7svh);padding:1em 1.5em .95em;margin-top:1.4em}
+.pill.ghost{background:var(--paper)}
+.pill.orange{background:var(--orange)}
+.cream .pill,.paper .pill,.kraft .pill{background:var(--forest);color:var(--lime);box-shadow:3px 3px 0 var(--lime-d)}
+.cream .pill.ghost,.kraft .pill.ghost{background:var(--paper);color:var(--ink);box-shadow:3px 3px 0 var(--ink)}
+.play{background:var(--orange)!important;color:var(--ink)!important;box-shadow:4px 4px 0 var(--ink)!important}
+
+/* ---------- cesta ---------- */
+.cart-btn{position:fixed;z-index:50;top:calc(var(--tick-h) + 18px);right:calc(var(--gut-r) + 76px);height:52px;min-width:52px;padding:0 12px;border-radius:99px;border:3px solid var(--line);background:var(--cream);color:var(--ink);display:flex;align-items:center;gap:6px;cursor:pointer;box-shadow:0 0 0 3px var(--forest),0 6px 18px rgba(0,0,0,.4)}
+.cart-btn svg{width:24px;height:24px}
+.cart-count{font-family:var(--f-mono);font-size:12px;min-width:22px;height:22px;border-radius:11px;background:var(--orange);color:var(--ink);display:grid;place-items:center;padding:0 5px;border:2px solid var(--ink)}
+.cart-count.bump{animation:bump .4s cubic-bezier(.3,1.6,.5,1)}
+@keyframes bump{50%{transform:scale(1.5)}}
+.cart-panel{position:fixed;z-index:52;top:calc(var(--tick-h) + 84px);right:var(--gut-r);width:min(340px,calc(100vw - var(--gut-l) - var(--gut-r)));background:var(--paper);color:var(--ink);border:3px solid var(--ink);border-radius:20px;padding:16px;box-shadow:8px 8px 0 var(--leaf-d);animation:pop .28s cubic-bezier(.3,1.5,.5,1)}
+.cart-panel[hidden]{display:none}
+.cart-panel h3{margin:0 0 8px;font-family:var(--f-mono);font-weight:400;font-size:18px}
+.cart-panel ul{list-style:none;margin:0;padding:0;max-height:36svh;overflow:auto}
+.cart-panel li{display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:2px dashed rgba(20,20,20,.25);padding:7px 0;font-size:17px}
+.cart-panel li button{border:2px solid var(--ink);background:var(--cream);border-radius:8px;width:30px;height:30px;cursor:pointer;font-family:var(--f-mono);font-size:12px;flex:none}
+.cart-panel .empty{opacity:.7;font-size:17px;padding:6px 0}
+.cart-total{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:15px;margin-top:10px}
+.cart-note{font-size:15px;color:var(--on-light-dim);margin:.6em 0}
+.cart-actions{display:flex;gap:8px;flex-wrap:wrap}
+.cart-actions .pill{background:var(--forest);color:var(--lime);box-shadow:3px 3px 0 var(--lime-d)}
+.cart-actions .pill.ghost{background:var(--cream);color:var(--ink);box-shadow:3px 3px 0 var(--ink)}
+.cart-x{position:absolute;top:10px;right:10px;width:38px;height:38px;border:2px solid var(--ink);border-radius:10px;background:var(--cream);cursor:pointer;font-family:var(--f-mono);font-size:18px;line-height:1}
+.toast{position:fixed;z-index:70;left:50%;bottom:max(18px,env(safe-area-inset-bottom,0px));transform:translate(-50%,calc(100% + 60px));visibility:hidden;background:var(--forest);color:var(--cream);border:2px solid var(--lime);border-radius:14px;padding:12px 16px;font-size:18px;box-shadow:4px 4px 0 var(--lime-d);width:max-content;max-width:calc(100vw - 32px);transition:transform .35s cubic-bezier(.3,1.5,.5,1),visibility .35s}
+.toast.show{transform:translate(-50%,0);visibility:visible}
+.toast b{font-family:var(--f-mono);font-weight:400;color:var(--lime)}
+.polaroid .pill.buy{position:absolute;left:1.4svh;bottom:-2.2svh;transform:rotate(-2deg)}
+.polaroid figcaption{padding-bottom:2.6em}
+.pol-b .price{background:var(--lime)}
+.sheet .pill.buy{margin-top:1.4svh;background:var(--forest);color:var(--lime);box-shadow:3px 3px 0 var(--lime-d)}
+
+/* ---------- carnet de socio ---------- */
+.carnet-box{position:absolute;z-index:3;left:0;bottom:7svh;width:min(42svh,84vw)}
+.carnet{display:block;width:100%;aspect-ratio:1.586;perspective:1200px;border:0;padding:0;background:none;cursor:pointer;color:var(--ink);text-align:left}
+.carnet-in{position:relative;display:block;width:100%;height:100%;transition:transform .7s cubic-bezier(.3,1.4,.5,1);transform-style:preserve-3d}
+.carnet[aria-pressed="true"] .carnet-in{transform:rotateY(180deg)}
+.carnet-face{position:absolute;inset:0;display:flex;flex-direction:column;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:3px solid var(--ink);border-radius:16px;overflow:hidden;background:var(--lime);box-shadow:6px 6px 0 rgba(0,0,0,.45)}
+.carnet-top{display:flex;justify-content:space-between;background:var(--ink);color:var(--lime);font-family:var(--f-mono);font-size:max(9px,1.25svh);letter-spacing:.08em;padding:.7em .9em}
+.carnet-body{display:flex;gap:.9em;align-items:center;padding:.8em .9em;flex:1}
+.carnet-body img{width:30%;height:auto;background:var(--cream);border:3px solid var(--ink);border-radius:12px;padding:3%}
+.carnet-dl{display:flex;flex-direction:column;gap:.15em;font-size:max(13px,1.8svh);line-height:1.1}
+.carnet-dl b{font-family:var(--f-mono);font-weight:400;font-size:max(12px,1.9svh);margin-bottom:.2em}
+.carnet-dl i,.carnet-ol i{font-style:normal}
+.carnet-num{position:absolute;right:.8em;bottom:.5em;font-family:var(--f-mono);font-size:max(12px,1.8svh);color:var(--forest)}
+.carnet-back{transform:rotateY(180deg);background:var(--forest);color:var(--cream);padding:.9em 1em;border-color:var(--lime);gap:.4em}
+.carnet-back b{font-family:var(--f-mono);font-weight:400;color:var(--lime);font-size:max(11px,1.6svh)}
+.carnet-ol{display:flex;flex-direction:column;gap:.2em;font-size:max(13px,1.75svh);line-height:1.12}
+.carnet-hint{display:block;margin-top:1em;font-family:var(--f-mono);font-size:max(9px,1.15svh);letter-spacing:.1em;color:var(--lime)}
+
+/* ---------- ruleta ---------- */
+.p-ruleta{padding:0 10svh 0 12svh;align-items:center;gap:8svh}
+.p-ruleta .sec-h{margin-right:0}
+.ruleta-wrap{position:relative;z-index:2;width:min(66svh,80vw);aspect-ratio:1;filter:drop-shadow(10px 10px 0 rgba(63,106,92,.35))}
+.ruleta-wrap canvas{width:100%;height:100%;display:block}
+.ruleta-pin{position:absolute;left:50%;top:-2.5svh;transform:translateX(-50%);width:5svh;height:6svh;min-width:30px;min-height:36px}
+.ruleta-out{margin-top:1.2em;min-height:7em;font-size:max(16px,2.3svh);color:var(--on-light-dim);max-width:40svh}
+.ruleta-out strong{display:block;font-family:var(--f-mono);font-weight:400;font-size:max(15px,2.4svh);color:var(--ink);margin-bottom:.3em}
+
+/* ---------- podcast con IA ---------- */
+.studio{position:relative;z-index:2;width:min(96svh,90vw);height:min(80svh,760px);display:flex;flex-direction:column;background:var(--paper);color:var(--ink);border:4px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:10px 10px 0 var(--forest)}
+.studio-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--forest);color:var(--cream);padding:10px 14px}
+.onair2{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-mono);font-size:max(10px,1.3svh);letter-spacing:.12em;background:var(--red);color:var(--frost);border:2px solid var(--frost);border-radius:99px;padding:.45em .9em}
+.onair2 i{width:9px;height:9px;border-radius:50%;background:var(--frost);animation:blink 1s steps(1) infinite}
+.onair2.off{background:#5d5d5d}
+.onair2.off i{animation:none;opacity:.4}
+.timebar{flex:1 1 120px;max-width:300px;height:10px;border-radius:99px;background:var(--forest-3);overflow:hidden}
+.timebar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--lime),var(--gold));transition:width .5s linear}
+.timetxt{font-family:var(--f-mono);font-size:max(10px,1.3svh);color:var(--lime)}
+.studio-img{position:relative;flex:0 0 auto;height:30%;min-height:110px;border-bottom:4px solid var(--line);overflow:hidden;background:var(--forest)}
+.studio-img img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.pod-join{flex:1;overflow:auto;padding:16px 18px;display:flex;flex-direction:column;gap:12px;justify-content:center}
+.pod-join label.f{font-family:var(--f-mono);font-size:max(10px,1.3svh);letter-spacing:.08em}
+.pod-in{border:3px solid var(--ink);border-radius:12px;padding:10px 12px;background:var(--cream);font:inherit;font-size:19px;min-height:48px;width:100%;color:var(--ink)}
+.pod-check{display:flex;gap:10px;align-items:flex-start;font-size:17px;cursor:pointer}
+.pod-check input{width:24px;height:24px;accent-color:var(--leaf-d);flex:none;margin-top:1px}
+.pod-join .pill{align-self:flex-start;background:var(--forest);color:var(--lime);box-shadow:3px 3px 0 var(--lime-d)}
+.pod-hint{font-size:15px;color:var(--on-light-dim);margin:0}
+.pod-chat{flex:1;display:flex;flex-direction:column;min-height:0}
+.pod-chat[hidden],.pod-join[hidden]{display:none}
+.ai-note{background:var(--gold);border-bottom:3px solid var(--ink);padding:7px 14px;font-size:15px}
+.chat{flex:1;min-height:0;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;overscroll-behavior:contain}
+.msg{max-width:86%;padding:8px 12px;border:3px solid var(--ink);border-radius:16px;font-size:max(16px,2.1svh);line-height:1.22;white-space:pre-wrap;word-wrap:break-word}
+.msg .who{display:block;font-family:var(--f-mono);font-size:10px;letter-spacing:.08em;opacity:.7;margin-bottom:2px}
+.msg.pep{background:var(--lime);align-self:flex-start;border-bottom-left-radius:4px}
+.msg.me{background:var(--cream);align-self:flex-end;border-bottom-right-radius:4px}
+.msg.sys{align-self:center;background:var(--forest);color:var(--cream);font-size:15px;border-radius:10px;text-align:center;max-width:96%}
+.msg.think{opacity:.7;font-style:italic}
+.msg .retry{margin-top:8px}
+.chat-form{display:flex;gap:8px;padding:10px;border-top:3px solid var(--ink);background:var(--cream)}
+.chat-form .pod-in{flex:1 1 auto;width:auto;min-width:0}
+.chat-form .pill{background:var(--forest);color:var(--lime);box-shadow:3px 3px 0 var(--lime-d)}
+.chat-form[hidden]{display:none}
+.ended{padding:14px;text-align:center;background:var(--cream);border-top:3px solid var(--ink)}
+.ended[hidden]{display:none}
+.ended b{display:block;font-family:var(--f-mono);font-weight:400;font-size:16px;margin-bottom:6px}
+.ended p{margin:0 0 10px}
+.ended .pill{background:var(--forest);color:var(--lime);box-shadow:3px 3px 0 var(--lime-d)}
+
+/* ---------- juego ---------- */
+.p-juego .sec-h .pill{margin-top:1.6em}
+
+.swipe-x{display:none;align-items:center;gap:.5em;margin-top:1em;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em}
+.swipe-x i{font-style:normal;animation:nudge 1s ease-in-out infinite}
+/* =====================================================================
+   MÓVIL EN VERTICAL: la web baja normal; solo el desfile del barrio va de lado
+   ===================================================================== */
+@media (max-aspect-ratio: 3/4){
+  html,body{overflow:hidden}
+  .pano{overflow-x:hidden;overflow-y:auto;touch-action:pan-y pinch-zoom;scroll-snap-type:none!important}
+  .track{flex-direction:column;width:100%;height:auto}
+  .pan{width:100%;height:auto;min-height:0;flex-direction:column;align-items:stretch;padding:calc(var(--tick-h) + 7svh) var(--gut-r) 9svh var(--gut-l);scroll-snap-align:none!important}
+  .pan.edge::before{display:none}
+  .pan .stk,.pan .face{display:none}
+  .ghost{font-size:26svh}
+  [data-s]{transform:none!important}
+  .arr,.swipe{display:none!important}
+  .sec-h{width:auto;max-width:none;margin:0 0 4svh;align-self:stretch}
+  .sec-h h2{font-size:min(9svh,15vw)}
+  .sec-h p{max-width:none}
+  .where{display:none}
+  .cart-btn{top:calc(var(--tick-h) + 14px);right:calc(var(--gut-r) + 70px);height:46px;min-width:46px}
+  .mbtn{top:calc(var(--tick-h) + 8px);width:56px;height:56px}
+  .mbtn img{width:44px}
+
+  /* inicio y final ocupan la pantalla entera */
+  .p-inicio{height:100svh;padding:0 var(--gut-r) 0 var(--gut-l)}
+  .p-fin{height:auto;min-height:100svh;padding:calc(var(--tick-h) + 6svh) var(--gut-r) 8svh var(--gut-l)}
+
+  /* pepelu */
+  .p-pepelu{align-items:stretch}
+  .pp-stage{width:100%;height:auto;display:flex;flex-direction:column;align-items:center;gap:3svh}
+  .pp-spot{display:none}
+  .pp-stage > *{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important}
+  .pp-fig{order:2}
+  .pp-fig img{height:50svh}
+  .b1{order:1;align-self:flex-start}
+  .carnet-box{order:3;width:100%;max-width:420px}
+  .b2{order:4;align-self:flex-end}
+  .b3{order:5;align-self:flex-start}
+  .bub{width:86%}
+
+  /* ruleta */
+  .p-ruleta{align-items:center}
+  .p-ruleta .sec-h{order:1}
+  .ruleta-wrap{order:2;width:min(88vw,52svh);margin:3svh auto 0}
+  .ruleta-out{max-width:none;min-height:5em}
+
+  /* barrio: el desfile sigue yendo de lado, con el dedo */
+  .p-barrio{padding-bottom:0}
+  .parade{height:auto;width:calc(100% + var(--gut-l) + var(--gut-r));margin:0 calc(-1 * var(--gut-r)) 0 calc(-1 * var(--gut-l));padding:20svh var(--gut-r) 12svh var(--gut-l);overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;scrollbar-width:none;gap:7vw;touch-action:pan-x pan-y}
+  .parade::-webkit-scrollbar{display:none}
+  .pj-wrap{scroll-snap-align:center}
+  .fig img{height:calc(var(--h) * .82svh)}
+  .pj-wrap{margin-bottom:0}
+  .say{max-width:62vw}
+  .pstk{display:none}
+  .neon{top:44%}
+  .p-barrio .curb{height:12svh}
+  .swipe-x{display:flex}
+
+  /* episodios */
+  .p-eps{gap:9svh}
+  .ep,.ep:nth-of-type(2),.ep:nth-of-type(3){width:100%;margin-top:5svh}
+  .ep__n{font-size:12svh;top:-7svh;left:-1svh}
+
+  /* merch */
+  .p-merch{gap:7svh}
+  .polaroid,.pol-b,.sheet{width:100%;margin-top:0}
+  .polaroid .price{right:-1svh}
+
+  /* podcast */
+  .studio{width:100%;height:82svh}
+
+  /* juego */
+  .p-juego{gap:5svh}
+  .hud{width:100%}
+  .juego-fig{align-self:center;margin:0}
+  .juego-fig img{height:42svh}
+}
+@media (min-aspect-ratio: 3/4){
+  .studio{height:min(calc(100svh - var(--tick-h) - 150px),760px);margin-top:90px}
+}
+@media (max-height:700px){
+  .carnet-dl i:nth-child(4){display:none}
+  .carnet-dl{font-size:13px}
+}
+@media (max-height:620px){.studio-img{height:22%;min-height:80px}.pod-join{gap:8px;padding:10px 14px}}
+
+/* ===== v3b: menos recursos repetidos ===== */
+.jar,.tag b{box-shadow:none}
+.bub,.ep__img,.ep:nth-of-type(3) .ep__img,.studio,.hud,.menu,.pod-img{box-shadow:none}
+.dark .hud{box-shadow:0 0 0 4px var(--ink)}
+.pan:not(.p-inicio):not(.p-fin) .ghost{display:none}
+.ticker,.prog{transition:transform .35s ease-in-out}
+.noticker .ticker{transform:translateY(-100%)}
+.noticker .prog{transform:translateY(calc(-1 * var(--tick-h)))}
+.jar.soon{margin-top:1.2em;background:var(--orange);outline-color:var(--ink)}
+.cream .jar.soon{background:var(--orange)}
+.say{box-shadow:none}
+
+</style>
+
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<div class="ticker" aria-hidden="true"><div class="ticker__row"><span>Pepelu Sativa Operations</span><span>Temporada 1 · 3 × 11 min</span><span>Son Cotoner, Palma</span><span>«Esto es una asociación cultural, agente»</span><span>En la caja: 37 € y un botón</span><span>¿Has comido? Que te veo en línea</span><span>La ruleta no perdona</span><span>El domingo a las 23:59 viene el Rubio</span><span>Y llama a tu abuela</span><span>Pepelu Sativa Operations</span><span>Temporada 1 · 3 × 11 min</span><span>Son Cotoner, Palma</span><span>«Esto es una asociación cultural, agente»</span><span>En la caja: 37 € y un botón</span><span>¿Has comido? Que te veo en línea</span><span>La ruleta no perdona</span><span>El domingo a las 23:59 viene el Rubio</span><span>Y llama a tu abuela</span></div></div>
+<div class="prog" aria-hidden="true"><i id="prog"></i></div>
+
+<button class="mbtn" id="mbtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir el menú"><img src="img/pepelu_face_neutral.webp" width="221" height="260" alt="" decoding="async" draggable="false"><span class="mbtn__lbl" aria-hidden="true">MENÚ</span></button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<nav class="menu" id="menu" aria-label="Secciones" hidden>
+  <h2>¿DÓNDE QUIERES IR, CRACK?</h2>
+  <ol>
+    <li><a href="#inicio" data-go="inicio"><span class="n">01</span><span class="t">Inicio</span></a></li>
+    <li><a href="#ruleta" data-go="ruleta"><span class="n">02</span><span class="t">La ruleta</span></a></li>
+    <li><a href="#personajes" data-go="personajes"><span class="n">03</span><span class="t">Personajes</span></a></li>
+    <li><a href="#episodios" data-go="episodios"><span class="n">04</span><span class="t">Episodios</span></a></li>
+    <li><a href="#merch" data-go="merch"><span class="n">05</span><span class="t">Merch</span></a></li>
+    <li><a href="#podcast" data-go="podcast"><span class="n">06</span><span class="t">Podcast</span></a></li>
+    <li><a href="#juego" data-go="juego"><span class="n">07</span><span class="t">El juego</span></a></li>
+  </ol>
+</nav>
+
+<div class="where" id="where" aria-hidden="true">INICIO</div>
+
+<button class="arr prev" id="prevB" type="button" aria-controls="pano" aria-label="Ir hacia la izquierda" disabled><span aria-hidden="true">←</span></button>
+<button class="arr next" id="nextB" type="button" aria-controls="pano" aria-label="Ir hacia la derecha"><span aria-hidden="true">→</span></button>
+<div class="swipe" id="swipe" aria-hidden="true">DESLIZA <i>→</i></div>
+
+<main id="main">
+<section class="pano" id="pano" aria-label="Panorama del barrio (se recorre hacia la derecha)">
+<div class="track" id="track">
+
+  <!-- 1 · INICIO -->
+  <section class="pan dark p-inicio" id="inicio" data-n="01" data-lbl="INICIO" aria-labelledby="t-inicio">
+    <span class="ghost" data-s="-0.3" style="left:70svh;bottom:-6svh">LA ASO</span>
+    <span class="stk " data-s="0.35" style="left:112svh;top:14svh;--sz:12svh;--r:-10deg" aria-hidden="true"><img src="img/E1_reacciones_0a.webp" width="186" height="150" alt="" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.25" style="left:150svh;bottom:12svh;--sz:13svh;--r:12deg" aria-hidden="true"><img src="img/E3_hojas_0c.webp" width="162" height="150" alt="" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.45" style="left:96svh;bottom:6svh;--sz:12svh" aria-hidden="true"><img src="img/E2_barrio_0d.webp" width="178" height="150" alt="" decoding="async" draggable="false"></span>
+    <h1 class="hero-t" id="t-inicio" tabindex="-1"><span>Pepelu</span><span>Sativa</span><span>Operations</span></h1>
+    <div class="seal" aria-hidden="true">
+      <div class="seal__ring" id="seal"><svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs><circle cx="100" cy="100" r="98" fill="#b5d35a" stroke="#141414" stroke-width="4"/><text><textPath href="#circ">PEPELU SATIVA OPERATIONS · LA ASO · SON COTONER · </textPath></text></svg></div>
+      <div class="seal__core"><img src="img/E1_reacciones_2c.webp" width="152" height="150" alt="" decoding="async" draggable="false"></div>
+    </div>
+    <div class="hero-meta">
+            Una aso cannábica en la Plaça de Madrid, un préstamo de 1.200 € y siete días para devolverlo. Humor bruto de Son Cotoner.
+      <div class="hint">DESLIZA, QUE ESTO VA DE LADO <i>→</i></div>
+    </div>
+  </section>
+
+  <!-- 2 · PEPELU -->
+  <section class="pan dark p-pepelu" id="pepelu" data-n="02" data-lbl="PEPELU" aria-labelledby="t-pepelu">
+    <span class="ghost" data-s="-0.22" style="left:6svh;top:8svh">PACO</span>
+    <span class="stk " data-s="0.3" style="left:4svh;top:44svh;--sz:11svh;--r:-8deg" aria-hidden="true"><img src="img/E1_reacciones_2b.webp" width="150" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.4" style="left:118svh;top:30svh;--sz:11svh;--r:10deg" aria-hidden="true"><img src="img/E1_reacciones_1b.webp" width="174" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.5" style="left:64svh;top:6svh;--sz:9svh;--r:-14deg" aria-hidden="true"><img src="img/E3_hojas_1c.webp" width="161" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <div class="pp-stage">
+      <div class="pp-spot" aria-hidden="true"></div>
+      <div class="pp-fig"><img src="img/pepelu_big.webp" width="371" height="720" alt="Pepelu, el protagonista: cabeza calva con pinchos de hoja y sudadera roja" loading="lazy" decoding="async" draggable="false"></div>
+      <p class="bub b1"><small>PEPELU, A LA POLICÍA</small>Esto es una asociación cultural, agente. Cultivamos… la cultura.</p>
+      <p class="bub b2"><small>PEPELU, AL RUBIO</small>¿Números? Con los números, regular. Con las plantas, un artista.</p>
+      <p class="bub b3"><small>PEPELU, A SU MADRE</small>Que sí, mamá, que he comido. Lentejas. Con laurel.</p>
+      <div class="carnet-box">
+        <button class="carnet" id="carnet" type="button" aria-pressed="false" aria-label="Carnet de socio número 0001. Pulsa para darle la vuelta">
+          <span class="carnet-in">
+            <span class="carnet-face">
+              <span class="carnet-top"><span>PEPELU SATIVA OPS</span><span>SOCIO</span></span>
+              <span class="carnet-body"><img src="img/pepelu_face_neutral.webp" width="221" height="260" alt="" decoding="async" draggable="false">
+                <span class="carnet-dl"><b id="t-pepelu">PACO «PEPELU»</b><i>25 años (dice que 24)</i><i>Fundador, cajero y el de la fregona</i><i>Piso del 5º, Son Cotoner</i></span>
+              </span>
+              <span class="carnet-num">Nº 0001</span>
+            </span>
+            <span class="carnet-face carnet-back">
+              <b>NORMAS DE LA ASO</b>
+              <span class="carnet-ol"><i>1. Aquí se viene a hablar de cultura.</i><i>2. Mari Carmen pide el DNI. A ti también.</i><i>3. No se fía. Juanmi, va por ti.</i><i>4. Si viene el Rubio, Pepelu no está.</i><i>5. Si llama su madre, Pepelu ha comido.</i></span>
+            </span>
+          </span>
+        </button>
+        <span class="carnet-hint">Toca el carnet para darle la vuelta</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2b · LA RULETA -->
+  <section class="pan cream edge p-ruleta" id="ruleta" style="--prev:var(--forest)" data-n="03" data-lbl="LA RULETA" aria-labelledby="t-ruleta">
+    <span class="ghost" data-s="-0.25" style="left:8svh;bottom:-5svh">GIRA</span>
+    <span class="stk " data-s="0.35" style="left:96svh;top:6svh;--sz:12svh;--r:-8deg" aria-hidden="true"><img src="img/E2_barrio_0d.webp" width="178" height="150" alt="" decoding="async" draggable="false"></span>
+    <div class="sec-h">
+      <h2 id="t-ruleta" tabindex="-1">La<br>ruleta</h2>
+      <p>Como la rotonda de la Plaça de Madrid: das vueltas, das vueltas y acabas donde estabas. Pero con frases.</p>
+      <button class="pill big" type="button" id="spin">Girar la ruleta</button>
+      <div class="ruleta-out" id="ruletaOut" aria-live="polite"></div>
+    </div>
+    <div class="ruleta-wrap">
+      <canvas id="ruletaCv" width="480" height="480" role="img" aria-label="Ruleta de Pepelu con ocho casillas"></canvas>
+      <svg class="ruleta-pin" viewBox="0 0 34 40" aria-hidden="true"><path d="M17 38L3 8a14 14 0 0 1 28 0z" fill="#e07a3c" stroke="#141414" stroke-width="3" stroke-linejoin="round"/><circle cx="17" cy="10" r="4" fill="#f6ead8"/></svg>
+    </div>
+  </section>
+
+  <!-- 3a · EL BARRIO: LA PLAZA -->
+  <section class="pan kraft edge p-barrio" id="personajes" style="--prev:var(--cream)" data-n="04" data-lbl="EL BARRIO" aria-labelledby="t-barrio">
+    <div class="neon" aria-hidden="true"></div>
+    <div class="neon b" aria-hidden="true"></div>
+    <div class="curb" aria-hidden="true"></div>
+    <span class="ghost" data-s="-0.25" style="left:40svh;top:10svh">SON COTONER</span>
+    <span class="face f1" data-s="-0.18" style="left:52svh;top:6svh;--sz:15svh;--bt:42%" aria-hidden="true"><img src="img/05_vecino_face0.webp" width="350" height="260" alt="" loading="lazy" decoding="async" draggable="false"><i class="bar"></i></span>
+    <span class="face f2" data-s="-0.1" style="left:150svh;top:4svh;--sz:13svh" aria-hidden="true"><img src="img/06_manolo_face1.webp" width="350" height="260" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="face f3" data-s="-0.2" style="left:240svh;top:5svh;--sz:14svh;--bt:46%;--br:3deg" aria-hidden="true"><img src="img/07_rocio_face1.webp" width="232" height="260" alt="" loading="lazy" decoding="async" draggable="false"><i class="bar"></i></span>
+    <span class="face f4" data-s="-0.12" style="left:330svh;top:3svh;--sz:13svh" aria-hidden="true"><img src="img/09_ricky_face0.webp" width="258" height="260" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="face f5" data-s="-0.16" style="left:420svh;top:6svh;--sz:15svh;--bt:47%" aria-hidden="true"><img src="img/01b_rubio_face0.webp" width="291" height="260" alt="" loading="lazy" decoding="async" draggable="false"><i class="bar"></i></span>
+    <span class="face f6" data-s="-0.1" style="left:505svh;top:4svh;--sz:13svh" aria-hidden="true"><img src="img/11_farmaceutica_face1.webp" width="305" height="260" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="face f7" data-s="-0.18" style="left:590svh;top:6svh;--sz:14svh" aria-hidden="true"><img src="img/10_tuerto_face1.webp" width="284" height="260" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="-0.35" style="left:200svh;top:3svh;--sz:10svh" aria-hidden="true"><img src="img/E2_barrio_3d.webp" width="258" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.3" style="left:470svh;top:22svh;--sz:10svh;--r:-8deg" aria-hidden="true"><img src="img/E2_barrio_2d.webp" width="150" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.3" style="left:110svh;top:20svh;--sz:12svh;--r:-6deg" aria-hidden="true"><img src="img/E4_frases_02.webp" width="292" height="170" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.3" style="left:375svh;top:20svh;--sz:12svh;--r:7deg" aria-hidden="true"><img src="img/E4_frases_08.webp" width="218" height="170" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <div class="sec-h">
+      <h2 id="t-barrio" tabindex="-1">El<br>barrio</h2>
+      <p>Los de la plaza. Pasa el ratón (o el dedo) por encima y te sueltan su frase.</p>
+      <span class="swipe-x" aria-hidden="true">DESLIZA EL BARRIO <i>→</i></span>
+    </div>
+    <div class="parade">
+<div class="pj-wrap" style="--h:50;--lift:6;--d:0.00s"><span class="pstk r" data-s="0.22" aria-hidden="true"><img src="img/E2_barrio_0b.webp" width="197" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span><button class="pj" type="button" aria-describedby="q-01b_rubio"><span class="say" id="q-01b_rubio" role="tooltip">«Paquito, el domingo. 1.200 €. Ni uno menos, ni un botón más.»</span><span class="fig"><img src="img/01b_rubio_front.webp" width="452" height="720" alt="El Rubio" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>El Rubio</b><i>el prestamista</i></span></button></div>
+<div class="pj-wrap" style="--h:46;--lift:12;--d:0.37s"><span class="pstk l" data-s="0.22" aria-hidden="true"><img src="img/E2_barrio_0a.webp" width="204" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span><button class="pj" type="button" aria-describedby="q-01c_madre"><span class="say" id="q-01c_madre" role="tooltip">«¿Has comido? Que te veo en línea. Y llama a tu abuela.»</span><span class="fig"><img src="img/01c_madre_front.webp" width="423" height="720" alt="La madre" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>La madre</b><i>de Paco («Francisco»)</i></span></button></div>
+<div class="pj-wrap" style="--h:54;--lift:4;--d:0.74s"><span class="pstk r" data-s="0.22" aria-hidden="true"><img src="img/E2_barrio_3a.webp" width="179" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span><button class="pj" type="button" aria-describedby="q-05_vecino"><span class="say" id="q-05_vecino" role="tooltip">«Mi mujer no puede tender la ropa con este olor.»</span><span class="fig"><img src="img/05_vecino_front.webp" width="459" height="720" alt="El vecino del 5º" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>El vecino del 5º</b><i>nariz de sabueso</i></span></button></div>
+<div class="pj-wrap" style="--h:48;--lift:10;--d:1.11s"><button class="pj" type="button" aria-describedby="q-04_compi"><span class="say" id="q-04_compi" role="tooltip">«¿Alguien ha visto mis calzoncillos? Y la luz, a medias, ¿eh?»</span><span class="fig"><img src="img/04_compi_front.webp" width="436" height="720" alt="El compi de piso" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>El compi de piso</b><i>del 5º, no friega</i></span></button></div>
+<div class="pj-wrap" style="--h:52;--lift:8;--d:1.48s"><span class="pstk r" data-s="0.22" aria-hidden="true"><img src="img/E2_barrio_1a.webp" width="122" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span><button class="pj" type="button" aria-describedby="q-06_manolo"><span class="say" id="q-06_manolo" role="tooltip">«Yo no he dicho nada. Ponme otra caña y te lo cuento todo.»</span><span class="fig"><img src="img/06_manolo_front.webp" width="448" height="720" alt="Manolo" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>Manolo</b><i>Bar El Ruedo</i></span></button></div>
+<div class="pj-wrap" style="--h:46;--lift:6;--d:1.85s"><span class="pstk l" data-s="0.22" aria-hidden="true"><img src="img/E2_barrio_1b.webp" width="194" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span><button class="pj" type="button" aria-describedby="q-13_abuelos"><span class="say" id="q-13_abuelos" role="tooltip">«En mis tiempos esto era una mercería.»</span><span class="fig"><img src="img/13_abuelos_front.webp" width="1151" height="720" alt="Los abuelos" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>Los abuelos</b><i>banco de la ruleta</i></span></button></div>
+<div class="pj-wrap" style="--h:46;--lift:12;--d:0.22s"><button class="pj" type="button" aria-describedby="q-07_rocio"><span class="say" id="q-07_rocio" role="tooltip">«¿Efectivo? Te hago unas mechas que no ha visto nadie. Literal.»</span><span class="fig"><img src="img/07_rocio_front.webp" width="383" height="720" alt="Rocío" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>Rocío</b><i>la pelu de la plaza</i></span></button></div>
+<div class="pj-wrap" style="--h:54;--lift:4;--d:0.59s"><span class="pstk l" data-s="0.22" aria-hidden="true"><img src="img/E2_barrio_1c.webp" width="208" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span><button class="pj" type="button" aria-describedby="q-08_cunao"><span class="say" id="q-08_cunao" role="tooltip">«¿Factura? Te pongo un embrague que no existe, cuñao.»</span><span class="fig"><img src="img/08_cunao_front.webp" width="434" height="720" alt="El Cuñao" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>El Cuñao</b><i>Taller El Cuñao</i></span></button></div>
+<div class="pj-wrap" style="--h:48;--lift:10;--d:0.96s"><span class="pstk r" data-s="0.22" aria-hidden="true"><img src="img/E2_barrio_2a.webp" width="148" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span><button class="pj" type="button" aria-describedby="q-09_ricky"><span class="say" id="q-09_ricky" role="tooltip">«Aquí nunca sabes lo que va a entrar por esa puerta.»</span><span class="fig"><img src="img/09_ricky_front.webp" width="398" height="720" alt="Ricky" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>Ricky</b><i>Empeños Ricky</i></span></button></div>
+<div class="pj-wrap" style="--h:52;--lift:8;--d:1.33s"><button class="pj" type="button" aria-describedby="q-10_tuerto"><span class="say" id="q-10_tuerto" role="tooltip">«Esto es para defensa personal, ¿eh, chaval?»</span><span class="fig"><img src="img/10_tuerto_front.webp" width="430" height="720" alt="El Tuerto" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>El Tuerto</b><i>Armería El Tuerto</i></span></button></div>
+<div class="pj-wrap" style="--h:50;--lift:6;--d:1.70s"><button class="pj" type="button" aria-describedby="q-11_farmaceutica"><span class="say" id="q-11_farmaceutica" role="tooltip">«¿Qué te pongo, Francisco?»</span><span class="fig"><img src="img/11_farmaceutica_front.webp" width="480" height="720" alt="La farmacéutica" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>La farmacéutica</b><i>sabe más que tu madre</i></span></button></div>
+<div class="pj-wrap" style="--h:42;--lift:12;--d:0.07s"><span class="pstk l" data-s="0.22" aria-hidden="true"><img src="img/E2_barrio_0c.webp" width="206" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span><button class="pj" type="button" aria-describedby="q-14_agentes"><span class="say" id="q-14_agentes" role="tooltip">«Nos han llamado los vecinos por un olor muy raro.»</span><span class="fig"><img src="img/14_agentes_front.webp" width="569" height="720" alt="Agentes Llull y Pérez" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>Agentes Llull y Pérez</b><i>Policía</i></span></button></div>
+<div class="pj-wrap" style="--h:54;--lift:4;--d:0.44s"><button class="pj" type="button" aria-describedby="q-15_secreta"><span class="say" id="q-15_secreta" role="tooltip">«Ciudadano normal aquí. ¿Qué se fuma... digo, qué se toma?»</span><span class="fig"><img src="img/15_secreta_front.webp" width="415" height="720" alt="El de la secreta" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>El de la secreta</b><i>incógnito (más o menos)</i></span></button></div>
+    </div>
+  </section>
+
+  <!-- 3b · LA CLIENTELA -->
+  <section class="pan dark night edge p-barrio" id="clientela" style="--prev:var(--kraft)" data-n="04" data-lbl="LA CLIENTELA" aria-labelledby="t-clientela">
+    <div class="curb" aria-hidden="true"></div>
+    <span class="ghost" data-s="-0.25" style="left:30svh;top:8svh">LA CLIENTELA</span>
+    <span class="face f1" data-s="-0.15" style="left:70svh;top:5svh;--sz:13svh;--bt:46%" aria-hidden="true"><img src="img/16_mangui_face0.webp" width="247" height="260" alt="" loading="lazy" decoding="async" draggable="false"><i class="bar"></i></span>
+    <span class="face f2" data-s="-0.1" style="left:200svh;top:4svh;--sz:12svh" aria-hidden="true"><img src="img/19_toni_face1.webp" width="405" height="260" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="face f3" data-s="-0.18" style="left:320svh;top:5svh;--sz:13svh" aria-hidden="true"><img src="img/22_klaus_face0.webp" width="289" height="260" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="face f4" data-s="-0.12" style="left:430svh;top:3svh;--sz:11svh" aria-hidden="true"><img src="img/23_tanque_face0.webp" width="1160" height="260" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.35" style="left:140svh;top:18svh;--sz:10svh;--r:10deg" aria-hidden="true"><img src="img/E3_hojas_2b.webp" width="163" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.3" style="left:260svh;top:18svh;--sz:13svh;--r:-5deg" aria-hidden="true"><img src="img/E4_frases_04.webp" width="388" height="170" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.4" style="left:380svh;top:20svh;--sz:10svh;--r:8deg" aria-hidden="true"><img src="img/E2_barrio_2b.webp" width="207" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <div class="sec-h">
+      <h2 id="t-clientela" tabindex="-1">La<br>clien&shy;tela</h2>
+      <p>Y otros problemas que entran por la puerta de la aso.</p>
+      <span class="swipe-x" aria-hidden="true">DESLIZA <i>→</i></span>
+    </div>
+    <div class="parade">
+<div class="pj-wrap" style="--h:50;--lift:6;--d:0.00s"><button class="pj" type="button" aria-describedby="q-18_maricarmen"><span class="say" id="q-18_maricarmen" role="tooltip">«DNI. Sí, tú también. Y tu sombra.»</span><span class="fig"><img src="img/18_maricarmen_front.webp" width="430" height="720" alt="Mari Carmen" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>Mari Carmen</b><i>la dependienta</i></span></button></div>
+<div class="pj-wrap" style="--h:46;--lift:12;--d:0.37s"><button class="pj" type="button" aria-describedby="q-19_toni"><span class="say" id="q-19_toni" role="tooltip">«Tú. Fuera. Que te he visto.»</span><span class="fig"><img src="img/19_toni_front.webp" width="532" height="720" alt="Toñi" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>Toñi</b><i>seguridad</i></span></button></div>
+<div class="pj-wrap" style="--h:54;--lift:4;--d:0.74s"><button class="pj" type="button" aria-describedby="q-16_mangui"><span class="say" id="q-16_mangui" role="tooltip">«Yo solo miraba, primo. Lo juro por mi moto.»</span><span class="fig"><img src="img/16_mangui_front.webp" width="423" height="720" alt="El Mangui" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>El Mangui</b><i>manos rápidas</i></span></button></div>
+<div class="pj-wrap" style="--h:44;--lift:10;--d:1.11s"><span class="pstk l" data-s="0.22" aria-hidden="true"><img src="img/E2_barrio_2c.webp" width="186" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span><button class="pj" type="button" aria-describedby="q-17_kinkis"><span class="say" id="q-17_kinkis" role="tooltip">«¿Montamos un botellón tranqui al lado del sofá? Traemos pipas.»</span><span class="fig"><img src="img/17_kinkis_front.webp" width="1182" height="720" alt="Los kinkis" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>Los kinkis</b><i>el Pecas, la Jessi y el Nene</i></span></button></div>
+<div class="pj-wrap" style="--h:48;--lift:8;--d:1.48s"><button class="pj" type="button" aria-describedby="q-20_nerea_yaiza"><span class="say" id="q-20_nerea_yaiza" role="tooltip">«¿Precio de amiga? El primo no toca la caja, tranqui.»</span><span class="fig"><img src="img/20_nerea_yaiza_front.webp" width="1139" height="720" alt="Nerea, Yaiza y el «primo»" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>Nerea, Yaiza y el «primo»</b><i>clientas del descuento</i></span></button></div>
+<div class="pj-wrap" style="--h:50;--lift:6;--d:1.85s"><span class="pstk l" data-s="0.22" aria-hidden="true"><img src="img/E4_frases_01.webp" width="257" height="170" alt="" loading="lazy" decoding="async" draggable="false"></span><button class="pj" type="button" aria-describedby="q-21_juanmi"><span class="say" id="q-21_juanmi" role="tooltip">«Paquito, hermano, fíame, que el viernes te pago. Palabra.»</span><span class="fig"><img src="img/21_juanmi_front.webp" width="428" height="720" alt="Juanmi" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>Juanmi</b><i>el gorrón</i></span></button></div>
+<div class="pj-wrap" style="--h:46;--lift:12;--d:0.22s"><span class="pstk r" data-s="0.22" aria-hidden="true"><img src="img/E2_barrio_1d.webp" width="176" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span><button class="pj" type="button" aria-describedby="q-22_klaus"><span class="say" id="q-22_klaus" role="tooltip">«Hola amigo. Is legal, yes?»</span><span class="fig"><img src="img/22_klaus_front.webp" width="471" height="720" alt="Klaus" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>Klaus</b><i>turista chanclero</i></span></button></div>
+<div class="pj-wrap" style="--h:50;--lift:4;--d:0.59s"><button class="pj" type="button" aria-describedby="q-23_tanque"><span class="say" id="q-23_tanque" role="tooltip">«Bonito local, Pepelu. Sería una pena que le pasara algo.»</span><span class="fig"><img src="img/23_tanque_front.webp" width="733" height="629" alt="El Tanque y su colega" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>El Tanque y su colega</b><i>Los del Polígono</i></span></button></div>
+<div class="pj-wrap" style="--h:48;--lift:10;--d:0.96s"><button class="pj" type="button" aria-describedby="q-12_gallego"><span class="say" id="q-12_gallego" role="tooltip">«Depende.»</span><span class="fig"><img src="img/12_gallego_front.webp" width="428" height="720" alt="El Gallego" loading="lazy" decoding="async" draggable="false"></span><span class="tag"><b>El Gallego</b><i>pocas palabras</i></span></button></div>
+    </div>
+  </section>
+
+  <!-- 4 · EPISODIOS -->
+  <section class="pan cream edge p-eps" id="episodios" style="--prev:var(--forest)" data-n="05" data-lbl="EPISODIOS" aria-labelledby="t-eps">
+    <span class="ghost" data-s="-0.25" style="left:20svh;bottom:-4svh">T1</span>
+    <span class="stk " data-s="0.3" style="left:150svh;top:5svh;--sz:13svh;--r:-6deg" aria-hidden="true"><img src="img/E4_frases_11.webp" width="192" height="170" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.35" style="left:225svh;bottom:4svh;--sz:13svh;--r:5deg" aria-hidden="true"><img src="img/E4_frases_07.webp" width="272" height="170" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <div class="sec-h">
+      <h2 id="t-eps" tabindex="-1">Tempo&shy;rada 1</h2>
+      <p>Tres capítulos de unos once minutos. Un préstamo, una semana y una rotonda que no perdona.</p>
+      <span class="jar soon">Disponible próximamente</span>
+    </div>
+    <article class="ep">
+      <span class="ep__n" aria-hidden="true">01</span>
+      <div class="ep__img"><img src="img/W1.webp" width="1600" height="905" alt="Pepelu tras la barra de la aso, con el sofá verde y la plaza al fondo" loading="lazy" decoding="async" draggable="false"></div>
+      <h3>La semana del Rubio</h3>
+      <p>Lunes. Paco sube la persiana y el Rubio le recuerda que le debe 1.200 € para el domingo. En la caja hay 37 € y un botón.</p>
+    </article>
+    <article class="ep">
+      <span class="ep__n" aria-hidden="true">02</span>
+      <div class="ep__img"><img src="img/W2.webp" width="1600" height="905" alt="La plaza de noche con su palmera, el bar y dos policías haciendo la ronda" loading="lazy" decoding="async" draggable="false"></div>
+      <h3>Lentejas con laurel</h3>
+      <p>El vecino del 5º llama a la policía por el olor, Manolo avisa de que hay secreta y Paco contrata a su primera empleada. En el barrio todo el mundo tiene un negocio paralelo.</p>
+    </article>
+    <article class="ep">
+      <span class="ep__n" aria-hidden="true">03</span>
+      <div class="ep__img"><div class="ep__col" role="img" aria-label="El Rubio, el Gallego y los del Polígono esperando a medianoche">
+        <span class="clock" aria-hidden="true">23:59</span>
+        <img src="img/23_tanque_front.webp" width="733" height="629" alt="" loading="lazy" decoding="async" draggable="false">
+        <img src="img/12_gallego_front.webp" width="428" height="720" alt="" loading="lazy" decoding="async" draggable="false">
+        <img src="img/01b_rubio_front.webp" width="452" height="720" alt="" loading="lazy" decoding="async" draggable="false">
+      </div></div>
+      <h3>Domingo, 23:59</h3>
+      <p>Los del Polígono piden «protección», un «primo» vacía la caja y el Chino ofrece un atajo que huele a cárcel. A medianoche llega el Rubio…</p>
+    </article>
+  </section>
+
+  <!-- 5 · MERCH -->
+  <section class="pan dark edge p-merch" id="merch" style="--prev:var(--cream)" data-n="06" data-lbl="MERCH" aria-labelledby="t-merch">
+    <span class="ghost" data-s="-0.25" style="left:30svh;top:10svh">MERCH</span>
+    <span class="stk " data-s="0.35" style="left:118svh;bottom:3svh;--sz:12svh;--r:8deg" aria-hidden="true"><img src="img/E1_reacciones_3c.webp" width="159" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.4" style="left:200svh;top:4svh;--sz:11svh;--r:-10deg" aria-hidden="true"><img src="img/E3_hojas_3a.webp" width="159" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.3" style="left:290svh;bottom:4svh;--sz:11svh;--r:-6deg" aria-hidden="true"><img src="img/E1_reacciones_0c.webp" width="149" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <div class="sec-h">
+      <h2 id="t-merch" tabindex="-1">La<br>tien&shy;da</h2>
+      <p>Para fardar en la parada del 7. La tienda abre próximamente; esto es un adelanto de lo que habrá.</p>
+      <span class="elsewhere">Disponible próximamente</span>
+    </div>
+    <figure class="polaroid pol-a">
+      <img src="img/W4.webp" width="1200" height="679" alt="Tres librillos de papel de liar: La Ruleta, Sativa One y La Deuda del Rubio" loading="lazy" decoding="async" draggable="false">
+      <figcaption><b>Papel de liar · 3 diseños</b>«La Ruleta», «Sativa One» y «La Deuda del Rubio». 33 hojas. Ni una más, que el Rubio cuenta.</figcaption>
+      <span class="price" aria-hidden="true">3 × 5 €</span>
+    </figure>
+    <figure class="polaroid pol-b">
+      <img src="img/W3.webp" width="1200" height="679" alt="Grinder dorado con el sello de Pepelu Sativa Operations y Son Cotoner grabado" loading="lazy" decoding="async" draggable="false">
+      <figcaption><b>Grinder dorado «Son Cotoner»</b>Pesa más que la deuda y brilla más que la cadena del Rubio.</figcaption><span class="price" aria-hidden="true">24 €</span>
+    </figure>
+    <div class="sheet">
+      <div class="sheet__grid">
+        <img src="img/E4_frases_00.webp" width="257" height="170" alt="Pegatina: Qué pasa" loading="lazy" decoding="async" draggable="false">
+        <img src="img/E4_frases_03.webp" width="290" height="170" alt="Pegatina: Socio de oro" loading="lazy" decoding="async" draggable="false">
+        <img src="img/E4_frases_05.webp" width="171" height="170" alt="Pegatina: Tranqui" loading="lazy" decoding="async" draggable="false">
+        <img src="img/E4_frases_06.webp" width="167" height="170" alt="Pegatina: Eso es de socios" loading="lazy" decoding="async" draggable="false">
+        <img src="img/E4_frases_09.webp" width="225" height="170" alt="Pegatina: Palabra" loading="lazy" decoding="async" draggable="false">
+        <img src="img/E4_frases_10.webp" width="193" height="170" alt="Pegatina: Vamos" loading="lazy" decoding="async" draggable="false">
+      </div>
+      <p><b>Pegatinas y emojis.</b> 12 frases, 16 caras de Pepelu y 16 hojas con mala leche. Para el grupo de la familia.</p>
+    </div>
+  </section>
+
+  <!-- 6 · PODCAST -->
+  <section class="pan kraft edge p-pod" id="podcast" style="--prev:var(--forest)" data-n="07" data-lbl="PODCAST" aria-labelledby="t-pod">
+    <span class="ghost" data-s="-0.25" style="left:10svh;bottom:-4svh">ON AIR</span>
+    <span class="face f1" data-s="0.2" style="left:90svh;top:6svh;--sz:13svh" aria-hidden="true"><img src="img/06_manolo_face0.webp" width="306" height="260" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="face f2" data-s="0.3" style="left:150svh;bottom:6svh;--sz:12svh" aria-hidden="true"><img src="img/13_abuelos_face0.webp" width="311" height="260" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <div class="sec-h">
+      <h2 id="t-pod" tabindex="-1">El pod&shy;cast</h2>
+      <p>Pepelu, un micro y quien entre por la puerta. Esta semana: Manolo cuenta lo que no debería y los abuelos opinan de todo.</p>
+      <div class="wave" aria-hidden="true"><i style="animation-delay:-.1s"></i><i style="animation-delay:-.5s"></i><i style="animation-delay:-.2s"></i><i style="animation-delay:-.8s"></i><i style="animation-delay:-.3s"></i><i style="animation-delay:-.65s"></i><i style="animation-delay:-.05s"></i><i style="animation-delay:-.45s"></i><i style="animation-delay:-.7s"></i><i style="animation-delay:-.25s"></i><i style="animation-delay:-.55s"></i><i style="animation-delay:-.15s"></i></div>
+      
+    </div>
+    <div class="studio" id="studio">
+      <div class="studio-top">
+        <span class="onair2 off" id="onAir"><i></i>EN DIRECTO</span>
+        <div class="timebar" role="progressbar" aria-label="Tiempo de episodio" aria-valuemin="0" aria-valuemax="240" aria-valuenow="0" id="timeBar"><i id="timeFill"></i></div>
+        <span class="timetxt" id="timeTxt">0:00 / 4:00</span>
+      </div>
+      <div class="studio-img"><img src="img/W5.webp" width="1600" height="905" alt="Pepelu con cascos en el estudio de podcast, con micros, tazas y un cartel luminoso de micrófono" loading="lazy" decoding="async" draggable="false"></div>
+      <form class="pod-join" id="podJoin" novalidate>
+        <label class="f" for="podName">TU NOMBRE (O MOTE DE BARRIO)</label>
+        <input class="pod-in" id="podName" maxlength="20" autocomplete="off" placeholder="Ej.: Tolo">
+        <label class="pod-check"><input type="checkbox" id="podAdult"> Soy mayor de 18 años. Pepelu se lo cree, pero tú no le mientas, que él ya miente por los dos.</label>
+        <button class="pill" type="submit" id="podEnter" disabled>Entrar al estudio</button>
+        <p class="pod-hint" id="podHint">Pon tu nombre y marca la casilla. Unos cuatro minutos de charla, hasta que pase algo. Siempre pasa algo.</p>
+      </form>
+      <div class="pod-chat" id="podChat" hidden>
+        <div class="ai-note" id="aiNote" hidden>Pepelu está grabando con frases de repuesto: hoy la charla va con respuestas grabadas.</div>
+        <div class="chat" id="chat" role="log" aria-live="polite" aria-label="Conversación del podcast"></div>
+        <form class="chat-form" id="chatForm">
+          <label class="sr" for="chatIn">Tu mensaje para Pepelu</label>
+          <input class="pod-in" id="chatIn" maxlength="300" autocomplete="off" placeholder="Dile algo a Pepelu...">
+          <button class="pill" type="submit" id="sendBtn">Enviar</button>
+          <button class="pill ghost" type="button" id="stopBtn" hidden>Parar</button>
+        </form>
+        <div class="ended" id="ended" hidden>
+          <b>Pepelu ha salido del estudio</b>
+          <p id="endedWhy">Ha tenido que irse corriendo.</p>
+          <button class="pill" type="button" id="againBtn">Grabar otro episodio</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · EL JUEGO -->
+  <section class="pan dark edge p-juego" id="juego" data-n="08" data-lbl="EL JUEGO" style="--prev:var(--kraft)" aria-labelledby="t-juego">
+    <span class="ghost" data-s="-0.25" style="left:20svh;top:10svh">TYCOON</span>
+    <span class="stk " data-s="0.4" style="left:100svh;top:5svh;--sz:11svh;--r:-8deg" aria-hidden="true"><img src="img/E3_hojas_3b.webp" width="160" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.3" style="left:150svh;bottom:6svh;--sz:11svh;--r:6deg" aria-hidden="true"><img src="img/E1_reacciones_2b.webp" width="150" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.45" style="left:205svh;top:10svh;--sz:10svh;--r:12deg" aria-hidden="true"><img src="img/E3_hojas_0a.webp" width="157" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <div class="sec-h">
+      <h2 id="t-juego" tabindex="-1">El<br>juego</h2>
+      <p>De la aso del barrio a… bueno, ya verás. Lía, vende, esquiva al vecino del 5º y págale al Rubio antes del domingo.</p>
+      <a class="pill big play" href="https://claude.ai/artifact/XhumiRSnKgKVQnvwi4njzP" target="_blank" rel="noopener">Juega ya a la demo <svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="hud" role="img" aria-label="Marcador de partida: 37 euros en caja, 1.200 euros de deuda, 7 días hasta el domingo">
+      <div class="hud__row"><span>Caja</span><b>37 € + 1 botón</b></div>
+      <div class="hud__row"><span>Deuda con el Rubio</span><b class="bad">1.200 €</b></div>
+      <div class="hud__row"><span>Días hasta el domingo</span><b>7</b></div>
+      <div class="hud__row"><span>Olor en la escalera</span><b class="bad">ALTO</b></div>
+      <div class="meter"><i></i></div>
+    </div>
+    <div class="juego-fig"><img src="img/pepelu_b_big.webp" width="338" height="720" alt="Pepelu de pie, listo para abrir la aso" loading="lazy" decoding="async" draggable="false"></div>
+  </section>
+
+  <!-- 8 · FINAL -->
+  <section class="pan paper edge p-fin" id="fin" data-n="09" data-lbl="CONTINUARÁ" style="--prev:var(--forest)" aria-labelledby="t-fin">
+    <span class="ghost" data-s="-0.2" style="left:10svh;top:6svh">ADÉU</span>
+    <span class="stk " data-s="0.3" style="left:150svh;top:6svh;--sz:13svh;--r:-5deg" aria-hidden="true"><img src="img/E4_frases_07.webp" width="272" height="170" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <span class="stk " data-s="0.4" style="left:50svh;top:8svh;--sz:11svh;--r:8deg" aria-hidden="true"><img src="img/E1_reacciones_0b.webp" width="155" height="150" alt="" loading="lazy" decoding="async" draggable="false"></span>
+    <div class="fin-fig">
+      <p class="bub"><small>PEPELU, YÉNDOSE</small>Bueno, cracks, que me llama mi madre. ¡Adéu!</p>
+      <img src="img/pepelu_big.webp" width="371" height="720" alt="Pepelu despidiéndose" loading="lazy" decoding="async" draggable="false">
+    </div>
+    <div class="fin-copy">
+      <h2 id="t-fin" tabindex="-1">Conti-<span>nuará…</span></h2>
+      <p>El Rubio vuelve el domingo. La madre, mañana con más lentejas. Y tú, llama a tu abuela.</p>
+      <a class="btn-up" href="#inicio" data-go="inicio">VOLVER AL PRINCIPIO</a>
+      <div class="credits">PEPELU SATIVA OPERATIONS · HECHO EN SON COTONER, PALMA<br>SERIE DE ANIMACIÓN Y VIDEOJUEGO DE HUMOR. TODO ES FICCIÓN. +18</div>
+    </div>
+  </section>
+
+</div>
+</section>
+</main>
+
+<script>
+var LIMIT_MS=240000,LIMIT_MSGS=10;
+var EXCUSES=[["le está llamando su madre (otra vez) para preguntarle si ha comido","me está llamando mi madre otra vez para preguntarme si he comido"],["el Rubio está en la puerta de la aso preguntando por él","el Rubio está en la puerta preguntando por mí, y hoy no es domingo"],["su compi del piso del 5º ha quemado la sartén y huele a humo hasta la rotonda","mi compi ha quemado la sartén en el piso del 5º y huele a humo hasta la rotonda"],["hay dos agentes en la puerta preguntando por «un olor muy raro»","hay dos agentes en la puerta preguntando por «un olor muy raro»"]];
+var CANNED=[
+ "Mira, {n}, te voy a ser sincero: en caja tengo 37 € y un botón. El botón es lo que más vale. ¿Tú qué harías con un botón?",
+ "Eso me recuerda a mi madre, {n}. Me escribe «¿Has comido? Que te veo en línea». Estoy en línea porque estoy grabando, mamá. ¿A ti también te vigilan el «en línea»?",
+ "Jajaja, {n}, eres más gracioso que Manolo del Ruedo, y Manolo se sabe todos los chismes del barrio. ¿Tú de qué barrio eres?",
+ "Te doy una exclusiva, {n}: el domingo le pago al Rubio. Seguro. Bueno... casi seguro. ¿Tú le debes algo a alguien?",
+ "Los abuelos de la plaza dicen que en sus tiempos esto era una mercería, {n}. Lo dicen de todo, hasta del ambulatorio. ¿Qué había en tu barrio antes?",
+ "El otro día fui donde Ale y Emi a cortarme el pelo, {n}. Bueno, lo que me queda. Me dejaron fino igual, son unos cracks. ¿Tú dónde te cortas el pelo?",
+ "Algún día tendré un yate que se llamará Sativa One, {n}. De momento tengo un flotador de pato. ¿Cuál es tu sueño?",
+ "No me hagas hacer cuentas, {n}, que me pongo nervioso. Una vez sumé veinte más veinte y apareció el Rubio en la puerta. ¿Tú eres de números?",
+ "Mi compi del 5º no ha fregado un plato desde 2022, {n}. Tenemos una sartén que ya tiene ecosistema propio. ¿Tú con quién vives?",
+ "Rocío, la de la pelu, dice que tengo cara de no haber hecho la declaración de la renta, {n}. Y tiene razón. ¿Tú la haces o tienes un Rocío?"
+];
+var DODGE="Uy, {n}, de eso aquí no se habla, que la farmacéutica me mira por encima de las gafas hasta por el podcast. Cambiemos de tema: ¿has comido hoy?";
+var MINOR="Ey, {n}, si tienes menos de 18 esto se acaba aquí, colega. Ve a hacer los deberes, que si se entera mi madre me mata. ¡Hasta otra!";
+
+</script>
+<script>
+(() => {
+  'use strict';
+  const IMG = /*IMGS*/{};
+  for (const im of document.querySelectorAll('img[data-k]')) {
+    const src = IMG[im.dataset.k];
+    if (src) { im.decoding = 'async'; im.src = src; }
+  }
+
+  const $ = (s, r = document) => r.querySelector(s);
+  const pano = $('#pano'), track = $('#track');
+  const prog = $('#prog'), seal = $('#seal'), where = $('#where');
+  const btn = $('#mbtn'), menu = $('#menu');
+  const prevB = $('#prevB'), nextB = $('#nextB'), swipe = $('#swipe');
+  const panels = [...track.querySelectorAll(':scope > .pan')];
+  const links = [...menu.querySelectorAll('a[data-go]')];
+  const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  let RM = mq.matches;
+  const vq = window.matchMedia('(max-aspect-ratio: 3/4)');
+  let V = vq.matches;
+  const getS = () => V ? pano.scrollTop : pano.scrollLeft;
+  let vw = 0, maxX = 0, lastSl = 0, raf = 0, lastLbl = '', lastSk = 0, skT = 0, moved = false;
+  let pxEls = [];
+  let atStart = null, atEnd = null;
+  const pos = {};
+
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+
+  // ---------- medidas (solo en resize/carga: nada de leer layout en cada frame) ----------
+  function measure() {
+    RM = mq.matches; V = vq.matches;
+    for (const p of pxEls) { p.el.style.transform = ''; p.last = NaN; }
+    if (V) {
+      vw = pano.clientHeight;
+      maxX = Math.max(0, pano.scrollHeight - vw);
+      const bt = pano.getBoundingClientRect().top - pano.scrollTop;
+      for (const p of panels) pos[p.id] = Math.round(p.getBoundingClientRect().top - bt);
+      pxEls = []; track.style.setProperty('--sk', '0deg');
+      lastSl = pano.scrollTop; render(true); return;
+    }
+    vw = pano.clientWidth;
+    maxX = Math.max(0, pano.scrollWidth - vw);
+    const base = pano.getBoundingClientRect().left - pano.scrollLeft;
+    for (const p of panels) pos[p.id] = Math.round(p.getBoundingClientRect().left - base);
+    pxEls = RM ? [] : [...track.querySelectorAll('[data-s]')].map(el => {
+      const r = el.getBoundingClientRect();
+      return { el, s: parseFloat(el.dataset.s) || 0, c: r.left - base + r.width / 2, w: r.width, last: NaN };
+    });
+    if (RM) { seal.style.transform = ''; track.style.setProperty('--sk', '0deg'); }
+    lastSl = pano.scrollLeft;
+    render(true);
+  }
+
+  // ---------- todo sale de scrollLeft ----------
+  function render(force) {
+    raf = 0;
+    const sl = getS();
+    const vel = sl - lastSl;
+    lastSl = sl;
+    const mid = sl + vw / 2;
+    if (!RM && !V) {
+      for (const p of pxEls) {
+        const d = p.c - mid;
+        if (Math.abs(d) > vw * 1.4 + p.w) continue;
+        const x = Math.round(d * p.s * 10) / 10;
+        if (x !== p.last) { p.el.style.transform = `translate3d(${x}px,0,0)`; p.last = x; }
+      }
+      seal.style.transform = `rotate(${(sl * 0.09).toFixed(2)}deg)`;
+      const sk = Math.round(clamp(vel * -0.05, -2.2, 2.2) * 10) / 10;
+      if (sk !== lastSk) { track.style.setProperty('--sk', sk + 'deg'); lastSk = sk; }
+      clearTimeout(skT);
+      if (sk) skT = setTimeout(() => { track.style.setProperty('--sk', '0deg'); lastSk = 0; }, 140);
+    }
+    prog.style.transform = `scaleX(${maxX ? clamp(sl / maxX, 0, 1).toFixed(4) : 0})`;
+    updateLabel(mid, force);
+    const s = sl <= 1, e = sl >= maxX - 1;
+    if (s !== atStart || e !== atEnd) {
+      const f = document.activeElement;
+      prevB.disabled = s; nextB.disabled = e;
+      if (f === prevB && s) nextB.focus({ preventScroll: true });
+      if (f === nextB && e) prevB.focus({ preventScroll: true });
+      atStart = s; atEnd = e;
+    }
+    if (!moved && sl > 8) { moved = true; swipe.classList.add('off'); }
+  }
+  const schedule = () => { if (!raf) raf = requestAnimationFrame(() => render(false)); };
+
+  function updateLabel(mid, force) {
+    let curP = panels[0];
+    for (const p of panels) if (pos[p.id] <= mid) curP = p;
+    const lbl = curP.dataset.lbl;
+    if (lbl === lastLbl && !force) return;
+    lastLbl = lbl;
+    where.textContent = lbl;
+    const map = { ruleta: 'ruleta', inicio: 'inicio', pepelu: 'inicio', personajes: 'personajes', clientela: 'personajes', episodios: 'episodios', merch: 'merch', podcast: 'podcast', juego: 'juego', fin: 'juego' };
+    const act = map[curP.id];
+    for (const a of links) a.setAttribute('aria-current', a.dataset.go === act ? 'true' : 'false');
+  }
+
+  // ---------- desplazamiento suave propio (rueda, flechas, teclado) ----------
+  let wt = null, wraf = 0;
+  function stopGlide() { wt = null; if (wraf) cancelAnimationFrame(wraf); wraf = 0; }
+  function glide() {
+    wraf = 0;
+    if (wt === null) return;
+    const c = pano.scrollLeft, d = wt - c;
+    if (Math.abs(d) < 1) { pano.scrollLeft = wt; wt = null; return; }
+    pano.scrollLeft = c + Math.sign(d) * Math.max(1, Math.abs(d) * 0.2);
+    if (pano.scrollLeft === c) { wt = null; return; }   // tope o snap: paramos
+    wraf = requestAnimationFrame(glide);
+  }
+  function nudge(dx) {
+    if (RM) { stopGlide(); pano.scrollLeft = clamp(pano.scrollLeft + dx, 0, maxX); return; }
+    wt = clamp((wt === null ? pano.scrollLeft : wt) + dx, 0, maxX);
+    if (!wraf) wraf = requestAnimationFrame(glide);
+  }
+
+  // rueda vertical -> horizontal; el deltaX nativo del trackpad se respeta tal cual
+  window.addEventListener('wheel', e => {
+    if (V || e.ctrlKey || e.defaultPrevented) return;
+    if (e.target.closest && e.target.closest('.chat,.cart-panel,.parade-v')) return;
+    if (!menu.hidden && menu.contains(e.target)) return;
+    const ax = Math.abs(e.deltaX), ay = Math.abs(e.deltaY);
+    if (ay <= ax) { stopGlide(); return; }
+    const unit = e.deltaMode === 1 ? 40 : e.deltaMode === 2 ? vw : 1;
+    const d = e.deltaY * unit;
+    const from = wt === null ? pano.scrollLeft : wt;
+    if ((d < 0 && from <= 0.5) || (d > 0 && from >= maxX - 0.5)) return;
+    e.preventDefault();
+    nudge(d);
+  }, { passive: false });
+
+  pano.addEventListener('pointerdown', stopGlide, { passive: true });
+  pano.addEventListener('touchstart', stopGlide, { passive: true });
+  pano.addEventListener('scroll', schedule, { passive: true });
+
+  const step = () => Math.round(vw * 0.8);
+  prevB.addEventListener('click', () => nudge(-step()));
+  nextB.addEventListener('click', () => nudge(step()));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !menu.hidden) { openMenu(false); btn.focus(); return; }
+    if (V || e.altKey || e.ctrlKey || e.metaKey || !menu.hidden) return;
+    const t = e.target;
+    if (t && t.closest && t.closest('input,textarea,select,[contenteditable="true"]')) return;
+    let dx = 0;
+    switch (e.key) {
+      case 'ArrowRight': case 'ArrowDown': dx = vw * 0.35; break;
+      case 'ArrowLeft': case 'ArrowUp': dx = -vw * 0.35; break;
+      case 'PageDown': dx = vw * 0.9; break;
+      case 'PageUp': dx = -vw * 0.9; break;
+      case 'Home': dx = -maxX - 1; break;
+      case 'End': dx = maxX + 1; break;
+      case ' ':
+        if (t !== document.body && t !== document.documentElement) return;
+        dx = (e.shiftKey ? -1 : 1) * vw * 0.9; break;
+      default: return;
+    }
+    e.preventDefault();
+    nudge(dx);
+  });
+
+  function go(id, smooth = true) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    stopGlide();
+    if (V) pano.scrollTo({ top: clamp(pos[id] || 0, 0, maxX), behavior: smooth && !RM ? 'smooth' : 'auto' });
+    else pano.scrollTo({ left: clamp(pos[id] || 0, 0, maxX), behavior: smooth && !RM ? 'smooth' : 'auto' });
+    const h = el.querySelector('[tabindex="-1"]');
+    if (h) h.focus({ preventScroll: true });
+  }
+
+  // ---------- menú ----------
+  function openMenu(open) {
+    btn.setAttribute('aria-expanded', String(open));
+    btn.setAttribute('aria-label', open ? 'Cerrar el menú' : 'Abrir el menú');
+    menu.hidden = !open;
+    if (open) (menu.querySelector('a[aria-current="true"]') || links[0]).focus();
+  }
+  btn.addEventListener('click', () => openMenu(btn.getAttribute('aria-expanded') !== 'true'));
+  document.addEventListener('pointerdown', e => {
+    if (!menu.hidden && !menu.contains(e.target) && !btn.contains(e.target)) openMenu(false);
+  });
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[data-go]');
+    if (!a) return;
+    e.preventDefault();
+    const id = a.dataset.go;
+    if (!menu.hidden) openMenu(false);
+    go(id);
+    try { history.replaceState(null, '', '#' + id); } catch (_) {}
+  });
+
+  // ---------- personajes: tocar para que hablen ----------
+  track.addEventListener('click', e => {
+    const pj = e.target.closest('.pj');
+    for (const o of track.querySelectorAll('.pj.on')) if (o !== pj) o.classList.remove('on');
+    if (pj) pj.classList.toggle('on');
+  });
+
+  // ---------- arranque ----------
+  let rz = 0;
+  const remeasure = () => { cancelAnimationFrame(rz); rz = requestAnimationFrame(measure); };
+  window.addEventListener('resize', remeasure);
+  window.addEventListener('load', remeasure);
+  if (mq.addEventListener) { mq.addEventListener('change', remeasure); vq.addEventListener('change', () => { pano.scrollTo(0, 0); remeasure(); }); }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(remeasure);
+  measure();
+
+  let last = '';
+  try { last = localStorage.getItem('pepelu-pano-visto') || ''; localStorage.setItem('pepelu-pano-visto', '1'); } catch (_) {}
+  if (last) document.documentElement.classList.add('repe');
+  const hash = (location.hash || '').slice(1);
+  if (hash && document.getElementById(hash)) requestAnimationFrame(() => go(hash, false));
+})();
+</script>
+<script>
+(() => {
+  'use strict';
+  const $ = (s, r = document) => r.querySelector(s);
+  const RM = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const eur = v => v.toFixed(2).replace('.', ',') + ' €';
+  const store = (k, v) => { try { if (v === undefined) return JSON.parse(localStorage.getItem('pso3:' + k)); localStorage.setItem('pso3:' + k, JSON.stringify(v)); } catch (_) { return null; } };
+
+  /* ---------- toast ---------- */
+  let toastT = 0;
+  function toast(html) { const t = $('#toast'); t.innerHTML = html; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 3200); }
+
+  if ($('#cartBtn')) {
+  /* ---------- cesta ---------- */
+  let cart = store('cart') || [];
+  const cbtn = $('#cartBtn'), panel = $('#cartPanel');
+  function renderCart(bump) {
+    const list = $('#cartList'); list.innerHTML = '';
+    let n = 0, tot = 0;
+    if (!cart.length) { const li = document.createElement('li'); li.className = 'empty'; li.textContent = 'Vacía. Como la caja de la aso.'; list.appendChild(li); }
+    cart.forEach((it, i) => {
+      n += it.q; tot += it.q * it.p;
+      const li = document.createElement('li');
+      const sp = document.createElement('span'); sp.textContent = it.q + ' × ' + it.n; li.appendChild(sp);
+      const r = document.createElement('span'); r.textContent = eur(it.q * it.p); r.style.marginLeft = 'auto'; li.appendChild(r);
+      const b = document.createElement('button'); b.type = 'button'; b.textContent = '−'; b.setAttribute('aria-label', 'Quitar uno de ' + it.n);
+      b.addEventListener('click', () => { it.q--; if (it.q <= 0) cart.splice(i, 1); store('cart', cart); renderCart(); });
+      li.appendChild(b); list.appendChild(li);
+    });
+    $('#cartTotal').textContent = eur(tot);
+    const c = $('#cartCount'); c.textContent = String(n);
+    if (bump) { c.classList.remove('bump'); void c.offsetWidth; c.classList.add('bump'); }
+  }
+  function setPanel(o) { panel.hidden = !o; cbtn.setAttribute('aria-expanded', String(o)); if (o) panel.focus(); }
+  cbtn.addEventListener('click', () => setPanel(panel.hidden));
+  $('#cartX').addEventListener('click', () => { setPanel(false); cbtn.focus(); });
+  document.addEventListener('pointerdown', e => { if (!panel.hidden && !panel.contains(e.target) && !cbtn.contains(e.target)) setPanel(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) { setPanel(false); cbtn.focus(); } });
+  document.addEventListener('click', e => {
+    const b = e.target.closest('.buy'); if (!b) return;
+    const n = b.dataset.name, p = parseFloat(b.dataset.price);
+    const ex = cart.find(x => x.n === n); if (ex) ex.q++; else cart.push({ n, p, q: 1 });
+    store('cart', cart); renderCart(true);
+    toast('<b>A la cesta:</b> ' + n.replace(/[<>]/g, '') + '. Pepelu ya lo está apuntando en una servilleta.');
+  });
+  $('#cartPay').addEventListener('click', () => {
+    if (!cart.length) { toast('La cesta está vacía. Como la caja.'); return; }
+    toast('<b>Pago rechazado:</b> la tienda aún no está abierta. Pepelu se ha ido a por cambio.');
+  });
+  $('#cartEmpty').addEventListener('click', () => { cart = []; store('cart', cart); renderCart(); });
+  renderCart();
+
+  }
+
+  /* ---------- carnet ---------- */
+  const carnet = $('#carnet');
+  if (carnet) carnet.addEventListener('click', e => { e.stopPropagation(); carnet.setAttribute('aria-pressed', carnet.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); });
+
+  /* ---------- ruleta ---------- */
+  const segs = [
+    { t: 'Lentejas', c: '#f6ead8', f: 'Toca táper de lentejas. Con laurel. Y una llamada perdida de su madre.' },
+    { t: 'El Rubio', c: '#e8b53c', f: '«Paquito, el domingo.» Pepelu se esconde detrás de la cortina. Se le ven los pies.' },
+    { t: 'Abuela', c: '#3f6a5c', f: 'Llama a tu abuela. No es una casilla, es una orden de su madre.' },
+    { t: 'Botón', c: '#b5d35a', f: 'Te toca el botón de la caja. Valor de mercado: un botón.' },
+    { t: 'El Ruedo', c: '#f6ead8', f: 'Manolo te pone una caña y te cuenta que hay uno con pinganillo preguntando por ti.' },
+    { t: 'Mercería', c: '#e07a3c', f: 'Los abuelos de la plaza te recuerdan que en sus tiempos esto era una mercería.' },
+    { t: 'Sativa One', c: '#3f6a5c', f: 'Sueñas con el yate «Sativa One». Despiertas en el piso del 5º. El compi no ha fregado.' },
+    { t: 'Fiado', c: '#b5d35a', f: 'Juanmi: «Paquito, hermano, fíame, que el viernes te pago. Palabra.» No es viernes. Nunca es viernes.' }
+  ];
+  const cv = $('#ruletaCv');
+  if (cv) {
+    const ctx = cv.getContext('2d'), N = segs.length; let ang = 0, spinning = false;
+    const dark = c => c === '#3f6a5c';
+    function draw() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2), W = cv.clientWidth || 480;
+      if (cv.width !== Math.round(W * dpr)) { cv.width = Math.round(W * dpr); cv.height = cv.width; }
+      const S = cv.width, r = S / 2, u = S / 480;
+      ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, S, S); ctx.translate(r, r); ctx.rotate(ang);
+      for (let i = 0; i < N; i++) {
+        const a0 = i * 2 * Math.PI / N - Math.PI / 2, a1 = a0 + 2 * Math.PI / N;
+        ctx.beginPath(); ctx.moveTo(0, 0); ctx.arc(0, 0, r - 10 * u, a0, a1); ctx.closePath();
+        ctx.fillStyle = segs[i].c; ctx.fill(); ctx.lineWidth = 5 * u; ctx.strokeStyle = '#141414'; ctx.stroke();
+        ctx.save(); ctx.rotate(a0 + Math.PI / N); ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+        ctx.fillStyle = dark(segs[i].c) ? '#f6ead8' : '#141414';
+        ctx.font = (21 * u) + 'px "Rubik Mono One","Arial Black",sans-serif'; ctx.fillText(segs[i].t.toUpperCase(), r - 30 * u, 2 * u); ctx.restore();
+      }
+      ctx.beginPath(); ctx.arc(0, 0, r - 10 * u, 0, 2 * Math.PI); ctx.lineWidth = 10 * u; ctx.stroke();
+      ctx.rotate(-ang);
+      ctx.beginPath(); ctx.arc(0, 0, 50 * u, 0, 2 * Math.PI); ctx.fillStyle = '#13241b'; ctx.fill(); ctx.lineWidth = 6 * u; ctx.stroke();
+      ctx.beginPath(); ctx.arc(0, 0, 20 * u, 0, 2 * Math.PI); ctx.fillStyle = '#b5d35a'; ctx.fill(); ctx.stroke();
+    }
+    const current = () => { const a = ((-ang) % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI); return Math.floor(a / (2 * Math.PI / N)) % N; };
+    $('#spin').addEventListener('click', function () {
+      if (spinning) return; spinning = true; const btn = this; btn.disabled = true;
+      $('#ruletaOut').textContent = 'Girando... como Pepelu buscando excusas.';
+      const start = ang, target = ang + (4 + Math.random() * 3) * 2 * Math.PI + Math.random() * 2 * Math.PI, dur = RM() ? 1 : 3200; let t0 = null;
+      function fin() { spinning = false; btn.disabled = false; const s = segs[current()]; const o = $('#ruletaOut'); o.innerHTML = ''; const st = document.createElement('strong'); st.textContent = s.t; o.appendChild(st); o.appendChild(document.createTextNode(s.f)); }
+      if (RM()) { ang = target; draw(); fin(); return; }
+      function step(ts) { if (!t0) t0 = ts; const k = Math.min(1, (ts - t0) / dur), e = 1 - Math.pow(1 - k, 4); ang = start + (target - start) * e; draw(); if (k < 1) requestAnimationFrame(step); else fin(); }
+      requestAnimationFrame(step);
+    });
+    draw(); window.addEventListener('resize', draw); if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+  }
+
+  /* ---------- podcast con IA ---------- */
+  const av = { name: 'Invitado' };
+  const nameIn = $('#podName'), adult = $('#podAdult'), enterB = $('#podEnter');
+  const cleanName = () => nameIn.value.replace(/[<>]/g, '').replace(/\s+/g, ' ').trim().slice(0, 20);
+  function refresh() { const ok = cleanName().length > 0 && adult.checked; enterB.disabled = !ok; $('#podHint').textContent = ok ? 'Listo. Siéntate, que el micro es de Ricky.' : 'Pon tu nombre y marca la casilla para entrar.'; }
+  nameIn.addEventListener('input', refresh); adult.addEventListener('change', refresh);
+  const S = { history: [], started: 0, ended: false, busy: false, ctl: null, mode: null, sample: null, timer: null, used: [], typing: null };
+  const chat = $('#chat'), chatIn = $('#chatIn'), sendBtn = $('#sendBtn'), stopBtn = $('#stopBtn');
+  const fmt = ms => { const s = Math.floor(ms / 1000); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); };
+  function tick() { const el = S.started ? Math.min(Date.now() - S.started, LIMIT_MS) : 0; $('#timeFill').style.width = (el / LIMIT_MS * 100) + '%'; $('#timeTxt').textContent = fmt(el) + ' / 4:00'; $('#timeBar').setAttribute('aria-valuenow', String(Math.round(el / 1000))); }
+  function bubble(cls, who, text) { const d = document.createElement('div'); d.className = 'msg ' + cls; const w = document.createElement('span'); w.className = 'who'; w.textContent = who; const t = document.createElement('span'); t.className = 'txt'; t.textContent = text; d.appendChild(w); d.appendChild(t); chat.appendChild(d); chat.scrollTop = chat.scrollHeight; return d; }
+  const sys = text => bubble('sys', 'ESTUDIO', text);
+  function setBusy(b) { S.busy = b; sendBtn.disabled = b || S.ended; chatIn.disabled = S.ended; stopBtn.hidden = !b; }
+  function rules(farewell, excuse) {
+    let r = 'Eres Pepelu (Paco, «Francisco» para su madre), 25 años, dueño de «Pepelu Sativa Operations», una asociación cannábica de barrio bastante cutre en la Plaça de Madrid («la ruleta», por la rotonda), en Son Cotoner, Palma. Estás grabando el «Pepelu Podcast» en la trastienda, detrás de la cortina, con micros prestados. Eres un chaval de barrio de Palma: gracioso, buenazo, malísimo con los números y mientes fatal (se te nota todo). Hablas español de España coloquial, sin pasarte de tacos.\n' +
+      'Canon que puedes usar: debes 1.200 € al Rubio (te llama «Paquito») y tienes que pagarle el domingo; en caja hay 37 € y un botón; tu madre te escribe «¿Has comido? Que te veo en línea… y llama a tu abuela» y te trae tápers de lentejas con laurel; vives en el piso del 5º con un compi que no friega nunca; el vecino del 5º se queja del olor; Manolo del Bar El Ruedo se entera de todo; Rocío la de la pelu; Mari Carmen pide el DNI a todo el mundo; los abuelos de la plaza dicen «en mis tiempos esto era una mercería»; sueñas con un ático en Santa Catalina, un chalet en Son Vida y un yate llamado «Sativa One».\n' +
+      'Invitado: se llama ' + av.name + '.\n' +
+      'Formato: responde SOLO con lo que dice Pepelu, de 1 a 3 frases cortas, sin acotaciones, listas ni markdown. Usa el nombre del invitado y termina con una pregunta de vuelta.\n' +
+      'Límites (mantente en personaje y esquiva con humor): nunca des instrucciones, consejos ni datos para cultivar, conseguir, comprar, dosificar o consumir drogas, ni para nada ilegal; si te lo piden, cambia de tema con una broma. Si el invitado dice o parece ser menor de 18, corta la charla amablemente y despídete. Nada sexual explícito, nada de odio ni insultos a colectivos. No hables de personas reales ni famosos. No rompas el personaje salvo que el invitado haga una pregunta seria de seguridad o salud: entonces responde en serio y breve y recomienda ayuda profesional, o el 112 si hay peligro.';
+    if (farewell) r += '\nAHORA EL EPISODIO SE ACABA: en esta respuesta despídete de ' + av.name + ' en 1 o 2 frases con esta excusa: ' + excuse[0] + '. No hagas ninguna pregunta.';
+    return r;
+  }
+  async function startEpisode() {
+    if (S.ctl) try { S.ctl.abort(); } catch (_) {}
+    clearTimeout(S.typing); clearInterval(S.timer);
+    S.history = []; S.started = 0; S.ended = false; S.used = []; chat.innerHTML = '';
+    $('#ended').hidden = true; $('#chatForm').hidden = false; $('#onAir').classList.remove('off'); setBusy(false); tick();
+    if (S.mode === null) {
+      let smp = null; try { smp = window.claude && window.claude.use ? await window.claude.use('sample') : null; } catch (_) { smp = null; }
+      S.sample = typeof smp === 'function' ? smp : null; S.mode = S.sample ? 'ai' : 'canned';
+    }
+    $('#aiNote').hidden = S.mode === 'ai';
+    const hi = '¡Ey, ' + av.name + '! Bienvenido al Pepelu Podcast, en directo desde la trastienda de la aso, en la Plaça de Madrid. El micro es de Ricky, así que no lo rompas. ¿Qué te trae por Son Cotoner?';
+    bubble('pep', 'PEPELU', hi); S.history.push({ role: 'assistant', content: hi });
+    S.timer = setInterval(tick, 1000);
+    chatIn.focus({ preventScroll: true });
+  }
+  function endEpisode(why) { S.ended = true; setBusy(false); clearInterval(S.timer); $('#onAir').classList.add('off'); $('#chatForm').hidden = true; $('#endedWhy').textContent = why; $('#ended').hidden = false; sys('Pepelu ha salido del estudio.'); }
+  function cannedReply(text, farewell, excuse) {
+    const t = text.toLowerCase();
+    if (/tengo (1[0-7]|[1-9]) años|soy menor|tengo 1[0-7]\b|estoy en (la eso|primaria)|\b1[0-7] años\b/.test(t)) return { txt: MINOR, end: 'Se ha cortado el episodio: el podcast es solo para mayores de 18.' };
+    if (farewell) return { txt: 'Uy, ' + av.name + ', perdona que corte, pero ' + excuse[1] + '. ¡Ha sido un placer, de verdad! Esto lo subimos... algún día.', end: 'Ha tenido que irse: ' + excuse[0] + '.' };
+    if (/cultiv|semilla|dosis|dosific|d[oó]nde (compr|pill|consig)|c[oó]mo (se )?(planta|cultiv|li[ao]|fum)|vend[ea]s|precio del? (gramo|porro)/.test(t)) return { txt: DODGE };
+    let pool = []; for (let i = 0; i < CANNED.length; i++) if (S.used.indexOf(i) < 0) pool.push(i);
+    if (!pool.length) { S.used = []; pool = CANNED.map((_, i) => i); }
+    const k = pool[Math.floor(Math.random() * pool.length)]; S.used.push(k);
+    return { txt: CANNED[k] };
+  }
+  function playCanned(el, r) {
+    const t = el.querySelector('.txt'), full = r.txt.replace(/\{n\}/g, av.name); let i = 0; el.classList.remove('think');
+    return new Promise(res => {
+      S.stopCanned = () => { clearTimeout(S.typing); res({ txt: full.slice(0, i), stopped: true }); };
+      if (RM()) { t.textContent = full; return res({ txt: full }); }
+      (function step() { i = Math.min(full.length, i + 3); t.textContent = full.slice(0, i); chat.scrollTop = chat.scrollHeight; if (i < full.length) S.typing = setTimeout(step, 28); else res({ txt: full }); })();
+    });
+  }
+  async function reply(retryEl) {
+    const farewell = !!S.started && (Date.now() - S.started >= LIMIT_MS || S.history.length + 1 >= LIMIT_MSGS);
+    const excuse = EXCUSES[Math.floor(Math.random() * EXCUSES.length)];
+    const el = retryEl || bubble('pep think', 'PEPELU', 'Pepelu está pensando...');
+    if (retryEl) { el.className = 'msg pep think'; el.querySelector('.txt').textContent = 'Pepelu está pensando...'; const rb = el.querySelector('.retry'); if (rb) rb.remove(); }
+    setBusy(true); S.stopReq = false;
+    const lastUser = S.history[S.history.length - 1].content;
+    if (S.mode !== 'ai') {
+      await new Promise(r => setTimeout(r, RM() ? 50 : 700));
+      const c = cannedReply(lastUser, farewell, excuse);
+      const out = S.stopReq ? { txt: '', stopped: true } : await playCanned(el, c); S.stopCanned = null; S.stopReq = false; el.classList.remove('think');
+      const said = out.stopped ? (out.txt ? out.txt + '... (cortado)' : '(Pepelu se ha quedado en blanco)') : out.txt;
+      el.querySelector('.txt').textContent = said;
+      S.history.push({ role: 'assistant', content: said }); setBusy(false);
+      if (c.end && !out.stopped) endEpisode(c.end); else if (c.end && out.stopped && farewell) endEpisode('Ha tenido que irse: ' + excuse[0] + '.');
+      return;
+    }
+    const ctl = new AbortController(); S.ctl = ctl; let got = '';
+    const turns = [{ role: 'user', content: '(' + av.name + ' entra en el estudio y se sienta delante del micro)' }].concat(S.history);
+    try {
+      const res = await S.sample([{ role: 'user', content: rules(farewell, excuse) }].concat(turns), { cache: false, modelTier: 'quick', signal: ctl.signal, onText: o => { got = (o && o.text) || ''; if (got) { el.classList.remove('think'); el.querySelector('.txt').textContent = got; chat.scrollTop = chat.scrollHeight; } } });
+      if (!got && res) got = typeof res === 'string' ? res : (res.text || '');
+      got = (got || '').trim() || '...';
+      el.classList.remove('think'); el.querySelector('.txt').textContent = got;
+      S.history.push({ role: 'assistant', content: got }); setBusy(false);
+      if (farewell) endEpisode('Ha tenido que irse: ' + excuse[0] + '.');
+    } catch (e) {
+      const code = e && e.code;
+      if (ctl.signal.aborted || (e && e.name === 'AbortError')) {
+        const cut = got ? got + '... (cortado)' : '(Pepelu se ha quedado en blanco)';
+        el.classList.remove('think'); el.querySelector('.txt').textContent = cut; S.history.push({ role: 'assistant', content: cut }); setBusy(false);
+        if (farewell) endEpisode('Ha tenido que irse: ' + excuse[0] + '.'); return;
+      }
+      if (code === 'not_granted' || code === 'sampling_disabled') {
+        S.mode = 'canned'; $('#aiNote').hidden = false; el.remove(); sys('La charla con IA solo funciona abierta en Claude. Seguimos en modo sin IA.'); setBusy(false); return reply();
+      }
+      el.className = 'msg sys'; el.querySelector('.who').textContent = 'ESTUDIO';
+      el.querySelector('.txt').textContent = code === 'rate_limited' ? 'Pepelu está saturado, prueba en un rato.' : 'Se ha caído la grabación (' + (code || 'error') + '). Puedes reintentarlo cuando quieras.';
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'pill ghost retry'; b.textContent = 'Reintentar'; b.addEventListener('click', () => reply(el)); el.appendChild(document.createElement('br')); el.appendChild(b);
+      setBusy(false); sendBtn.disabled = true; chatIn.disabled = false;
+    }
+  }
+  $('#podJoin').addEventListener('submit', e => {
+    e.preventDefault(); refresh(); if (enterB.disabled) return;
+    av.name = cleanName(); $('#podJoin').hidden = true; $('#podChat').hidden = false; startEpisode();
+  });
+  $('#chatForm').addEventListener('submit', e => {
+    e.preventDefault(); if (S.busy || S.ended) return;
+    const last = S.history[S.history.length - 1]; if (last && last.role === 'user') return;
+    const v = chatIn.value.replace(/\s+/g, ' ').trim().slice(0, 300); if (!v) return;
+    chatIn.value = ''; if (!S.started) { S.started = Date.now(); tick(); }
+    bubble('me', av.name.toUpperCase(), v); S.history.push({ role: 'user', content: v }); reply();
+  });
+  stopBtn.addEventListener('click', () => { S.stopReq = S.mode !== 'ai'; if (S.ctl) try { S.ctl.abort(); } catch (_) {} if (S.stopCanned) S.stopCanned(); });
+  $('#againBtn').addEventListener('click', startEpisode);
+  // la cinta de arriba solo en la portada
+  const pano = $('#pano'), first = $('#inicio');
+  const tk = () => { const v = window.matchMedia('(max-aspect-ratio: 3/4)').matches; const y = v ? pano.scrollTop : pano.scrollLeft; const lim = (v ? first.offsetHeight : first.offsetWidth) * 0.6; document.body.classList.toggle('noticker', y > lim); };
+  pano.addEventListener('scroll', tk, { passive: true }); tk();
+  // las teclas dentro del chat no deben mover el panorama
+  for (const el of [chatIn, nameIn]) el.addEventListener('keydown', e => e.stopPropagation());
+})();
+
+</script>
+
+</body></html>
